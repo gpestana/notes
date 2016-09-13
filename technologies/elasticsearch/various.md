@@ -1,0 +1,4 @@
+### Allocation settings and creation of new indexes
+
+The cluster routing allocation settings define the rules for the shard allocation to nodes. The shard allocation can happen during initial recovery, replica allocation, rebalancing, when nodeas are added and removed and when new indexes are created. The settings can be changed dinamically using the cluster settings API. One example of when disabling shard allocation is when performing a full cluster restart. Since the data nodes will reboot and join the cluster at random times, it is better if the cluster does not start rebalancing the data across the data nodes that have joined the cluster first.
+One thing to have in mind is that the setting `cluster.routing.allocation.enable:none` will also not allow new indices to be create, since the new indices will not be allocated to any node.
