@@ -1,7 +1,7 @@
-## The bind() function**
+## The bind() function
 
 
-When called, the function.bind(obj), bind() transfers the scope from the obj object to the function.
+When called, the `<function>.bind(<obj>)`, bind() transfers the scope from the *obj* object to the *function*.
 
 ```javascript
 // This is a script with a global scope
