@@ -39,7 +39,12 @@ To load data, the Collection.insert() may be used. Though, it is better to use [
 
 It may be useful to create stubs (mocking) the database. Packages such as `meteor/hwillson:stub-collections` do a good job at it.
 
+
+#### React testing
+
 For testing React components, the [Enzyme](https://github.com/airbnb/enzyme) package is the way to go. It has a `shallow()` function, which returns an initialized React component ready to be asserted [example](https://github.com/airbnb/enzyme#shallow-rendering)
+
+
 
 ```javascript
 import { shallow } from 'enzyme';
@@ -51,6 +56,33 @@ chai.assert(component.hasClass('list-item'));
 
  //...
 ```
+
+//Packages to install:
+
+meteor add practicalmeteor:mocha 	--> Test manager
+meteor add practicalmeteor:chai 	--> Asserts
+meteor npm install enzyme 				--> React 
+
+(meteor npm install --save react react-addons-test-utils chai)
+
+//Run:
+meteor test --driver-package practicalmeteor:mocha
+
+
+-- OR --
+
+Test React in isolation (a.k.a without Meteor!)
+
+    The isolated unit test will force your code to be less coupled to Meteor (good thing), and they will run much faster (good thing).
+
+    The Meteor test mode is useful for testing the configuration of Meteor specific features, like publications etc. This is where unit tests are mostly useless.
+
+    If you want to make sure that the combination of the react components and the Meteor features work well together, you can just write 1 or 2 end-to-end tests.
+
+
+https://facebook.github.io/react/docs/test-utils.html
+https://www.toptal.com/react/how-react-components-make-ui-testing-easy
+
 
 
 ### Summary:
