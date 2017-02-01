@@ -1,0 +1,16 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "gpestana",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.14.1",
+    "ramda": "^0.23.0",
+    "tap": "^10.0.0"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "name": "component-tests",
+  "version": "1.0.0",
+  "description": "",
+  "main": "api-test.js",
+  "scripts": {
+    "start": "node api-test"
+  },
+  "author": "gpestana",
+  "license": "MIT",
+  "dependencies": {
+    "tap": "^10.0.0"
+  }
+}

@@ -7,7 +7,7 @@ over the years, summaries of papers/articles/books I've read and general thought
 ### Index
 
 #### Tech
-[Component tests in docker with API and external database example](devops/docker_api_tests.md)
+[Component tests in docker with API and external database example](devops/docker_component_tests//docker_api_tests.md)
 
 [Create a custom Telegraf plugin](tech/influx_telegraf/custom_plugin_telegrag.md)
 

@@ -1,0 +1,24 @@
+version: '2'
+
+services:
+  mongodb-tests:
+    image: mongo:3
+    container_name: mongodb-tests
+    ports:
+      - "27018:27017"
+
+  api:
+    container_name: api-test
+    build:
+      context: ../api
+    depends_on:
+      - mongodb-tests
+
+  component-tests:
+    container_name: component-tests-api
+    build:
+      context: .
+    depends_on:
+      - api
+      - mongodb-tests
+
