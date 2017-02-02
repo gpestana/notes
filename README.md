@@ -28,6 +28,8 @@ over the years, summaries of papers/articles/books I've read and general thought
 
 [Startup thoughts and ideas - market](startups/market.md)
 
+[Initial metrics for bootstrapped SaaS](startups/initial_metrics_bootstrapped_saas.md)
+
 ### Talks
 [Websummit 2016 - most interesting](talks/web_summit_most_interesting.md)
 
