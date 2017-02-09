@@ -1,6 +1,6 @@
 Taneli Kaivola presentation
 
-https://www.schneier.com/
+check: https://www.schneier.com/
 - github (find bugs), develop gut feeling about what kind of bugs the application may have
 - what kind of bugs do you make when developing an application
 - kali linux
