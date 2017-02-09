@@ -15,6 +15,8 @@ over the years, summaries of papers/articles/books I've read and general thought
 
 [Notes on Elasticsearch](tech/elasticsearch/various.md)
 
+[Git: Set git email and username localy on a per repository basis] (tech/git/username_locally.md)
+
 [Thoughts and notes on functional programming in Node](tech/fp/nodejs.md)
 
 [Basic testing in Meteor](tech/meteor/testing.md)
