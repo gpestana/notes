@@ -11,6 +11,8 @@ over the years, summaries of papers/articles/books I've read and general thought
 
 [Create a custom Telegraf plugin](tech/influx_telegraf/custom_plugin_telegrag.md)
 
+[AWS: Auto mount volumes in EC2 instances with Cloudformation] (tech/aws/auto_mount_volume.md)
+
 [Notes on Elasticsearch](tech/elasticsearch/various.md)
 
 [Thoughts and notes on functional programming in Node](tech/fp/nodejs.md)
