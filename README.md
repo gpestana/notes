@@ -9,6 +9,8 @@ over the years, summaries of papers/articles/books I've read and general thought
 #### Tech
 [Component tests in docker with API and external database example](devops/docker_component_tests//docker_api_tests.md)
 
+[Input validation chain for APIs, etc..](tech/node/validationChain.js)
+
 [Create a custom Telegraf plugin](tech/influx_telegraf/custom_plugin_telegrag.md)
 
 [AWS: Auto mount volumes in EC2 instances with Cloudformation] (tech/aws/auto_mount_volume.md)
