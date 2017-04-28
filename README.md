@@ -13,13 +13,13 @@ over the years, summaries of papers/articles/books I've read and general thought
 
 [Create a custom Telegraf plugin](tech/influx_telegraf/custom_plugin_telegrag.md)
 
-[AWS: Auto mount volumes in EC2 instances with Cloudformation] (tech/aws/auto_mount_volume.md)
+[AWS: Auto mount volumes in EC2 instances with Cloudformation](tech/aws/auto_mount_volume.md)
 
-[Node: POSIX and stdin] (tech/node/stdin.md)
+[Node: POSIX and stdin](tech/node/stdin.md)
 
 [Notes on Elasticsearch](tech/elasticsearch/various.md)
 
-[Git: Set git email and username localy on a per repository basis] (tech/git/username_locally.md)
+[Git: Set git email and username localy on a per repository basis](tech/git/username_locally.md)
 
 [Thoughts and notes on functional programming in Node](tech/fp/nodejs.md)
 
