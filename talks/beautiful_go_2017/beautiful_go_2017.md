@@ -8,12 +8,12 @@
 
 #### Abstract:
 Go is beautiful. It's simplicity, concise syntax and well defined best practices
-make it a pleasure for anyone to read write code, from new programmers to the
+make it a pleasure for anyone to read and write code, from new programmers to the
 most experienced hacker. In this talk we embark on a voyage through examples of
 beautiful code written in Go. We explore how the creators of Go approach
 code comments and naming conventions when implementing Go's primitives, how 
 switches simplify Telegraf's code design, how proper error handling will make it
-a bliss to read code and enjoy the aesthetics of Go's concurrency code.
+a bliss to read code and we'll enjoy the aesthetics of Go's concurrency code.
 All code examples are taken from outstanding open source projects written in Go,
 including golang/go itself.
 
