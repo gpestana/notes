@@ -6,10 +6,17 @@
 
 #### Title: Beautiful Go
 
+
 #### Abstract:
+We will embark on an incredible voyage through the aesthetics of Go's code. 
+Go is beautiful! It's simplicity, concise syntax and well defined best practices 
+make it a pleasure for anyone to read and write code. In this talk, we'll enjoy 
+a good amount of beautiful Go code in the wild.
+
+#### Description:
 Go is beautiful. It's simplicity, concise syntax and well defined best practices
 make it a pleasure for anyone to read and write code, from new programmers to the
-most experienced hacker. In this talk we embark on a voyage through examples of
+most experienced hackers. In this talk we embark on a voyage through examples of
 beautiful code written in Go. We explore how the creators of Go approach
 code comments and naming conventions when implementing Go's primitives, how 
 switches simplify Telegraf's code design, how proper error handling will make it
