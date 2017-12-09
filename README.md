@@ -1,8 +1,8 @@
-# DRY toolkit
+### brain dump
 
-Time is precious. I often find myself digging up solutions for problems which I have solved before but
-can't quite remember the solution anymore. This repo contains a set of tools and code I have assembled
-over the years, summaries of papers/articles/books I've read and general thoughts and lessons.
+This is basically my tech brain dump garbage can. It's easier to solve problems when writing about them. I't also easy to forget the previously arrived solutions. I often find myself digging up solutions for problems which I have solved before but
+can't quite remember the solution anymore. So this garbage can contains write ups, tools, code and random thoughts I've put toghether
+over the years. Also writeups of papers/articles/books I've read too.
 
 #### Golang
 
