@@ -4,7 +4,9 @@ Time is precious. I often find myself digging up solutions for problems which I 
 can't quite remember the solution anymore. This repo contains a set of tools and code I have assembled
 over the years, summaries of papers/articles/books I've read and general thoughts and lessons.
 
-### Index
+#### Golang
+
+[Debugging 1: Invalid JSON output from go runtime](tech/go/debugging_1.md)
 
 #### Tech
 [Component tests in docker with API and external database example](devops/docker_component_tests//docker_api_tests.md)
