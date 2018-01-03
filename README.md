@@ -5,8 +5,11 @@ can't quite remember the solution anymore. So this garbage can contains write up
 over the years. Also writeups of papers/articles/books I've read too.
 
 #### Golang
+[Best practices](tech/go/best_practices.md)
 
 [Debugging 1: Invalid JSON output from go runtime](tech/go/debugging_1.md)
+
+[MIME/multipart post requests](tech/go/mime-multipart.md)
 
 #### Tech
 [Component tests in docker with API and external database example](devops/docker_component_tests//docker_api_tests.md)
