@@ -1,66 +1,101 @@
 ## Intro
 
-What does the child pronography industry, oppositors of oppressive regimes and 
-their families, drug dealers and people concerned with personal privacy have in 
-common? They are all using the same technology to access the internet 
-anonymously. The same technology that allows criminals to buy and sell drugs 
-online is also powering social progressive agendas and protecting citizens'
-private life.
+```
+The main goal of the talk is to raise awareness about the importance for common
+internet users to protect their data and footprints online (e.g. metadata), in 
+order to protect their privacy and freedom online. The twist is that the same
+technologies that can protect our privacy and citizens at risk (political and
+digital dissidents, citizens at risk), is also powering the so called dark web.
+Thus, complementary goals are to 1) highlight that technology can be used for 
+the good or bad, but that does not make it inherently good or bad, 2) protecting
+ personal data and privacy means protecting everyone's rights and freedom and 
+3) it is easy to start using the technologies and contribute.
+```
+
+> 1) catchy intro  
+> 2) tech used in dark web can also be used by you
+> (when talking about the dark web, people are afraid)
+> 3) first what is the dark web
+> (to access and have those properties ensured, technologies are needed)
+> 4) explain Tor
+> 5) why should you use Tor on a daily basis
+> 6) how can you use those Tor
+> 7) concrete steps
+> 8) wrap up
+
+What does the child pronography industry and oppositors of oppressive regimes or 
+citizens concerned with personal privacy have in common? They are all using the 
+same technology to access the internet anonymously. The same technology that 
+allows criminals to buy and sell drugs online is also powering social 
+progressive agendas and protecting citizens' private life.
 
 The technologies that enable criminals to operate and which power the so called
 dark web, are the same technologies that have the potential to protect citizens
 from rogue states, data harvesting from corporations, protect privacy and free
 speech and, ultimately, freedom.
 
-> narrative, personal story OR imagine yourself... Why does it matter?
-
 ## Goals of the talk
-Most of the times when talking with people about the same technologies that are
-used in the dark web, people react with fear and loathing. The first questions
-and concerns are whether it is illegal or whether they will
-stumble upon shaddy websites right away.
 
-> how about talking about the web browser (with Tor) as a gateway for the darkweb
-> to make it easirt for everyone to understand
+Most of the times, when I tell friends and non so technical people that they
+should be accessing the web through technologies that are used to access the 
+dark web for protecting their privacy, I am received with reactions of fear, 
+confusion and even disgust.
 
-The interesting thing
-about the technologies that power the dark web is that they are probably the
-best way to preserve people's privacy and ...
+Oneof their main concern is if whether using those technologies is illegal. 
+Or even more important, if they will stumble upon drug ads and child pronography
+material right away. The quick answer is no and no. We will soon dive deeper
+into those questions and much more. It has never been easy to talk about this 
+subject because of the misinformation about the darkweb and its technologies and
+the difference between them. Today, we will try to go through those questions.
 
-It is easy to demonize technology based on its use. But it is important to
-understand also how the same technology can be used to society's benefit. That's
-our goal for today(...)!
- 
+To tackle this subject, we'll try to answer three basic questions: what, why and 
+how? what is the dark web and its technologies, why should you use them, how can
+ you use them?
 
 ## What is the darkweb
+Let's start with the first question: what is the dark web and the technologies
+that power them?
 
-> "Breath in and bear with me" kinda of intro to this section. To make people 
-> feel comfortable with mode technical details
+A dark web is an internet that can be accessed only with specific software and 
+configurations. The specific software and configurations hide the footprints of 
+users and webpages. Basically, it allows users to access the internet
+anonymous as it becomes really hard to track what webpages and apps they've been
+visiting. This is the reason why those technologies are compeeling to criminals,
+as well as people concerned with their privacy online.
 
-But first, what is the dark web?
+The dark web users and services rely on a set of technologies that allow users 
+to be anonymous and untraceable. An example of a dark web is the privacy 
+protecting network formed by Tor users and services. Tor - standing for The 
+Onion Router - is one of the main technologies enabling anonymous communication 
+between users and services. 
 
-(in wikipedia)
-A darknet (or dark net) is any overlay network that can be accessed only with 
-specific software, configurations, or authorization, often using non-standard 
-communication protocols and ports. An example of a dark net is the privacy
-protecting network formed by Tor users and services.
+From a practical perspective, - from your perspective - you just need to replace
+your web browser (say, internet explorer/chrome/safari) by a browser that routes
+the web traffic through the Tor network. That's it. You then go ahead and browse through the same 
+websites than before and keep using the internet as always. This time though, you are 
+assured that no one can track your behaviour online without your consent. 
+There are other ways to route the traffic through the Tor network so that not
+only your sites activity is protected, but also which apps you are using and
+which devices at your home are connected to the internet. At the end of the talk,
+I will give you more hints about how to get that done too!
 
-> the technical things are complicated, not black and white. Even the 
-> professionals are not keeping up with the complexity and pace of>
-> Just see the darkweb as a browser that you can access to normal web and the
-> dark web and that will make your data private and not accessible by other
-> people.. -- give users perspective>
+To understand how can Tor protect our data - as well as being used for the dark
+web - let's briefly take a look on how it works.
 
+But first, please take a few moments to breath and bear with me through the next
+more technical 5 minutes. Technical details are complicated and not always 
+black and white and even the experts and maintainers of these technologies 
+recognise the complexity of these. Let's really briwfly try to understand how
+Tor works.
 
-## What technologies power the dark web
-The dark web users and services rely on a set of technologies. Those
-technologies allow users to be anonymous and untraceable.
+>> Tor brief tech explanation
 
-For example. Tor can protect you from traffic analysis. Traffic analysis
-consists of tracking your online bahaviour based on the websites and services
-you use, and from which location. With this information, websites are able to
-discriminate you, corporations may acquire information about you and your family
-that you may not feel confortable with and governaments may
+## Why should you use Tor? Why is it so important?
+Tor can protect you from traffic analysis. Traffic analysis consists of tracking
+your online bahaviour based on the websites and services you use, and from 
+which location. With this information, websites are able to discriminate you, 
+corporations may acquire information about you and your family that you may not 
+feel confortable with and governaments may
 
 Tor can protect your metadata. Metadata consists of ... 
 At first, metadata harvesting might not seem dangerous but ...
@@ -76,10 +111,7 @@ governaments or enemies.
 
 Tor does not solve all the problems. It only protects the transport of data.
 
-
-## How can you benefit from those technologies
-
-Why is data harvesting important? <example vegetarians>
+Why is data harvesting important?
 
 As our lives become more connected than even, corporations and malintented
 organizations have the capabilities to harvest more and more data about our
@@ -116,7 +148,8 @@ And how can you do it? With the help of technologies that -- unfortunately --
 also power the dark web.
 
 
-## Concrete steps on how to use the technologies that power the dark web for your benefit
+## How can you benefit from those technologies (concrete steps on how to use 
+## the technologies that power the dark web for yours and society benefit)
 
 So at this point you are asking yourself: what practical steps can I take in
 order to start protecting myself, my family and use these great technologies?
