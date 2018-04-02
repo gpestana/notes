@@ -1,15 +1,9 @@
 ## Meta
 
 ```
-The main goal of the talk is to raise awareness about the importance for common
-internet users to protect their data and footprints online (e.g. metadata), in 
-order to protect their privacy and freedom online. The twist is that the same
-technologies that can protect our privacy and citizens at risk (political and
-digital dissidents, citizens at risk), is also powering the so called dark web.
-Thus, complementary goals are to 1) highlight that technology can be used for 
-the good or bad, but that does not make it inherently good or bad, 2) protecting
- personal data and privacy means protecting everyone's rights and freedom and 3)
- it is easy to start using the technologies and contribute.
+The main goal of the talk is to raise awareness about the importance for common internet users to protect their data and footprints online (e.g. metadata), in order to protect their privacy and freedom online. The twist is that the same
+technologies that can protect our privacy and citizens at risk (political and digital dissidents, citizens at risk), is also powering the so called dark web. Thus, complementary goals are to 1) highlight that technology can be used for 
+the good or bad, but that does not make it inherently good or bad, 2) protecting personal data and privacy means protecting everyone's rights and freedom and 3) thast it is easy to start using the technologies and contribute.
 ```
 
 
@@ -132,7 +126,9 @@ do not and should not have to take that risk.
 Another reason is essentially that our lives are more connected than ever. The
 so called internet of things revolution and smart devices just came to increase 
 the amount of sensitive data leaks, which we are not even aware of.
+
 > Concrete example here
+
 This gives companies and malintented organizations the capabilities to 
 harvest more and more data about our private data. Where do we usually access 
 the internet? Which websites do we use the most? What are our interests? Which 
