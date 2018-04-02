@@ -1,4 +1,4 @@
-## Intro
+## Meta
 
 ```
 The main goal of the talk is to raise awareness about the importance for common
@@ -8,51 +8,55 @@ technologies that can protect our privacy and citizens at risk (political and
 digital dissidents, citizens at risk), is also powering the so called dark web.
 Thus, complementary goals are to 1) highlight that technology can be used for 
 the good or bad, but that does not make it inherently good or bad, 2) protecting
- personal data and privacy means protecting everyone's rights and freedom and 
-3) it is easy to start using the technologies and contribute.
+ personal data and privacy means protecting everyone's rights and freedom and 3)
+ it is easy to start using the technologies and contribute.
 ```
 
-> 1) catchy intro  
-> 2) tech used in dark web can also be used by you
-> (when talking about the dark web, people are afraid)
-> 3) first what is the dark web
-> (to access and have those properties ensured, technologies are needed)
-> 4) explain Tor
-> 5) why should you use Tor on a daily basis
-> 6) how can you use those Tor
-> 7) concrete steps
-> 8) wrap up
+
+## Script
 
 What does the child pronography industry and oppositors of oppressive regimes or 
 citizens concerned with personal privacy have in common? They are all using the 
-same technology to access the internet anonymously. The same technology that 
-allows criminals to buy and sell drugs online is also powering social 
-progressive agendas and protecting citizens' private life.
+same technology to access the internet anonymously to protect themselves. The 
+same technology that allows criminals to buy and sell drugs online is also 
+powering social progressive agendas and protecting citizens' private life.
 
 The technologies that enable criminals to operate and which power the so called
 dark web, are the same technologies that have the potential to protect citizens
 from rogue states, data harvesting from corporations, protect privacy and free
 speech and, ultimately, freedom.
 
-## Goals of the talk
+### Goals of the talk
 
-Most of the times, when I tell friends and non so technical people that they
+It has never been easy to talk about this subject because of the misinformation 
+about the darkweb and its technologies and mostly the difference between them. 
+
+Often, when I tell friends and non so technical people that they
 should be accessing the web through technologies that are used to access the 
-dark web for protecting their privacy, I am received with reactions of fear, 
+dark web for protecting their privacy, I'm not surprised  with reactions of fear,
 confusion and even disgust.
 
-Oneof their main concern is if whether using those technologies is illegal. 
+One of their main concern is if whether using those technologies is illegal. 
 Or even more important, if they will stumble upon drug ads and child pronography
-material right away. The quick answer is no and no. We will soon dive deeper
-into those questions and much more. It has never been easy to talk about this 
-subject because of the misinformation about the darkweb and its technologies and
-the difference between them. Today, we will try to go through those questions.
+material right away. By the way, the quick answers are no and no. We will soon 
+dive deeper into those questions and much more. 
 
-To tackle this subject, we'll try to answer three basic questions: what, why and 
-how? what is the dark web and its technologies, why should you use them, how can
- you use them?
+Followed by the initial surprise, the questions start popping out. It's 
+interesting to notice that the pattern is usually the same: first, what is the 
+dark web and what technologies are enabling it. The follow up questions after 
+understanding better the technical side, is the why. Why should I - or anyone 
+besides criminals - use those technologies. Finally, the discussion 
+ends most of the time with an how - how to use the same technologies that power 
+the dark web on a daily basis. 
 
-## What is the darkweb
+The conversation goes from surprise and hesitation to curiosity and wilingness
+to learn more about how to use the technologies that power the dark web for
+personal - and even for society's - benefit. So today we will try to answer
+those very same questions - what is the dark web, why should you use the
+technologies that power the dark web and finally, how to do so.
+
+###  What is the darkweb
+
 Let's start with the first question: what is the dark web and the technologies
 that power them?
 
@@ -88,9 +92,8 @@ black and white and even the experts and maintainers of these technologies
 recognise the complexity of these. Let's really briwfly try to understand how
 Tor works.
 
->> Tor brief tech explanation
+> Tor brief tech explanation
 
-## Why should you use Tor? Why is it so important?
 Tor can protect you from traffic analysis. Traffic analysis consists of tracking
 your online bahaviour based on the websites and services you use, and from 
 which location. With this information, websites are able to discriminate you, 
@@ -105,61 +108,82 @@ Thus to this characteristics, Tor is effective against internet censorship, in
 which users can access destination and content which would be restricted by
 governaments or ISPs.
 
-Journalists, whiteleblowers, political dissidents, NGOs, use Tor to communicate
-and share information safely, without being traced by potential rogue
-governaments or enemies.
+End-to-end encription is equaly important. Unfortunately, we cannot rely on
+current websites and apps to do that for us.
 
-Tor does not solve all the problems. It only protects the transport of data.
+## Why should you use Tor?
 
-Why is data harvesting important?
+So now that we know more about what the dark web is and how it is different 
+from the technologies that enable it, such as Tor, the next question is why 
+should you care about them? This is, in my opinion, the most interesting part of
+ the discussion.
 
-As our lives become more connected than even, corporations and malintented
-organizations have the capabilities to harvest more and more data about our
-private data. Where do we usually access the internet? Which websites do we use 
-the most? What are our interests? Which services do we use? All this data can be
-easily harvested and ultimately put together to make a realisitc map of who we
-are. This data can easily be used for business purposes, discrimination and or
-criminal purposes.
+The first reason is that internet providers and governaments have the tools and
+the will to track the online behaviour of its users and citizens, respectively.
+This is a fact and it was demonstrated by the documents leaked by Snowden and
+Manning about internet surveillance programs carried out by the US and EU intelligent
+services. While you may not be concerned about the fact that your governament may
+be able to collect all your online activity - and of your families - because you
+trust it, remember that the data is not only collected but also stored. With the
+current volatility in our society, are we able to ensure that sensitive data 
+about ourselves and our families will not be used against us in the future? We 
+do not and should not have to take that risk.
 
-It's easier than ever for personal information to be collected and exploited by 
+Another reason is essentially that our lives are more connected than ever. The
+so called internet of things revolution and smart devices just came to increase 
+the amount of sensitive data leaks, which we are not even aware of.
+> Concrete example here
+This gives companies and malintented organizations the capabilities to 
+harvest more and more data about our private data. Where do we usually access 
+the internet? Which websites do we use the most? What are our interests? Which 
+services do we use? All this data can be easily harvested and ultimately put 
+together to make a accurate profile of who we are. This data can easily be used 
+for business purposes without our consent, discrimination and or criminal 
+purposes. 
+For example, It's easier than ever for personal information to be collected and exploited by 
 ad companies and other corporations. Almost half of all websites roughly 99% of 
 popular news sites have tracking software installed on their 
 webpages [1][2]. These trackers can reveal your identity, health and income
 data, or where you live. 
 
-End-to-end encription is equaly important. Unfortunately, we cannot rely on
-current websites and apps to do that for us.
-
-Another important point for using these technologies is to make ilicit data
-harvesting so harder that it becomes inviable. It's all about economics: if hackers and
-big companies cannot harvest illegally people's data because it is protected,
+The 3rd point I'd like to make is economics. Using these technologies is 
+basically making ilicit data harvesting hard. So hard that it becomes inviable
+to do so. It's all about economics: if hackers and big companies cannot harvest 
+illegally people's data because it is protected,
 then it becomes just too expensive for them to do so. It becomes too expensive
 for companies like Cambridge Analytica to profile people's based on their data
 in order to change the course of democraric elections. Or it becomes realy
 expensive for rogue governaments to spy on their citizens looking for
 opportunities to silent regime or moral oppositors. Same goes for hackers who 
-are selling your data to god knows who.
+are selling your data to the highest bidder.
 If enough people turn on their privacy shields on, then all those business
 models will not make sense and our society gives a step forward!
 So it becomes almost an ethically and moral imperative to protect your personal data. 
 Not only for yourself, but for a fairer and more secure online society.
 
+If you are still not convinced and you still don't see a reason why you nor
+anyone else should use technologies that allow them to be anonymous online,
+think about the journalists, whiteleblowers, political dissidents, NGOs and
+other citizens at risk that use Tor to communicate and share information safely,
+ without being traced by potential rogue governaments or any malintended actors
+- such as paid hackers. 
+
+### How can you benefit from those technologies
+
+(..) So at this point you are asking yourself: what practical steps can I take in
+order to start protecting myself, my family and use these technologies?
+
+Tor does not solve all the problems. It only protects the transport of data.
+
 And how can you do it? With the help of technologies that -- unfortunately --
 also power the dark web.
-
-
-## How can you benefit from those technologies (concrete steps on how to use 
-## the technologies that power the dark web for yours and society benefit)
-
-So at this point you are asking yourself: what practical steps can I take in
-order to start protecting myself, my family and use these great technologies?
 
 A very good guide by The Citizen Lab from the University of Toronto called
 Security Planner (https://securityplanner.org/) <show in slides>. There you can
 find really good guides and easy guides to help youi protect your data and setup
 the Tor browsers in your desktop and Android or Apple device.
 
-## Wrap up
+### Wrap up
 
 The technologies that power the dark web are exactly that: technologies. 
 Instead of being afraid of their misuse, it's up to us to use them in a way that
@@ -171,7 +195,7 @@ takes society forward in terms of freedom, privacy and security.
 
 
 
-### Notes
+## Notes/ideas/etc..
 
 Without Tor, the streets of the internet become like the streets of a very
 heavily surveilled city. [...] With Tor, we have private spaces and private 
