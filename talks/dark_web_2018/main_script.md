@@ -9,186 +9,220 @@ the good or bad, but that does not make it inherently good or bad, 2) protecting
 
 ## Script
 
-What does the child pronography industry and oppositors of oppressive regimes or 
-citizens concerned with personal privacy have in common? They are all using the 
-same technology to access the internet anonymously to protect themselves. The 
-same technology that allows criminals to buy and sell drugs online is also 
-powering social progressive agendas and protecting citizens' private life.
+What do oppositors of oppressive regimes, citizens concerned with personal 
+privacy and child pornography industry have in common? They are all using the 
+same technology to access the internet anonymously. The 
+same technologies that are used by criminals to buy and sell drugs online are
+also empowering social progressive agendas and protect citizens' private life.
 
-The technologies that enable criminals to operate and which power the so called
-dark web, are the same technologies that have the potential to protect citizens
-from rogue states, data harvesting from corporations, protect privacy and free
-speech and, ultimately, freedom.
+The dark web is a scary topic. However, there is a lot of misinformation and 
+preconception about the dark web and its technologies. At this point you are 
+probably thinking ... **joke** ...
 
-### Goals of the talk
+I'm pretty sure that you are imagining the dark web as a sketchy place. And you 
+are right! There are online drug stores aplenty and anyone can easily find 
+stolen credit card on sale, for example. However, I'm not an 
+advocate of the illegal businesses going on the dark web. I'm here show how we
+all can use dark web technology to protect ourselves and our society with the
+same technology that allow criminals to create the sketchy dark web. In the end,
+the technology is just a tool. It can be used for good or bad, and  it's up to 
+us decide how to use it.
 
-It has never been easy to talk about this subject because of the misinformation 
-about the darkweb and its technologies and mostly the difference between them. 
+I'm pretty sure that at this point, you are really skeptical about all of this.
+Who's skeptical at this point? Raise your hands. As expected, I see many raised
+hands ... **possibly another joke** ...
 
-Often, when I tell friends and non so technical people that they
-should be accessing the web through technologies that are used to access the 
-dark web for protecting their privacy, I'm not surprised  with reactions of fear,
-confusion and even disgust.
+**something missing here?**
 
-One of their main concern is if whether using those technologies is illegal. 
-Or even more important, if they will stumble upon drug ads and child pronography
-material right away. By the way, the quick answers are no and no. We will soon 
-dive deeper into those questions and much more. 
+> slide with 3 next points, maybe? 
 
-Followed by the initial surprise, the questions start popping out. It's 
-interesting to notice that the pattern is usually the same: first, what is the 
-dark web and what technologies are enabling it. The follow up questions after 
-understanding better the technical side, is the why. Why should I - or anyone 
-besides criminals - use those technologies. Finally, the discussion 
-ends most of the time with an how - how to use the same technologies that power 
-the dark web on a daily basis. 
-
-The conversation goes from surprise and hesitation to curiosity and wilingness
-to learn more about how to use the technologies that power the dark web for
-personal - and even for society's - benefit. So today we will try to answer
-those very same questions - what is the dark web, why should you use the
-technologies that power the dark web and finally, how to do so.
+To clear this up, I'd like to show you the difference between the dark web and
+the technologies that enable it. And also, I want to lay out the reasons why you
+can and should use those technologies. Finally, I want to show how you can 
+use them on a daily basis to protect yourself and your family.
 
 ###  What is the darkweb
 
-Let's start with the first question: what is the dark web and the technologies
-that power them?
+Let's start with the first question: what is the dark web and which technologies
+enable it?
 
-A dark web is an internet that can be accessed only with specific software and 
-configurations. The specific software and configurations hide the footprints of 
-users and webpages. Basically, it allows users to access the internet
-anonymous as it becomes really hard to track what webpages and apps they've been
-visiting. This is the reason why those technologies are compeeling to criminals,
-as well as people concerned with their privacy online.
+A dark web is just like the normal internet that we are used to, but it can be 
+accessed only with specific software and configurations. 
 
-The dark web users and services rely on a set of technologies that allow users 
-to be anonymous and untraceable. An example of a dark web is the privacy 
-protecting network formed by Tor users and services. Tor - standing for The 
-Onion Router - is one of the main technologies enabling anonymous communication 
-between users and services. 
+Under this definition, there are multiple dark webs in use nowadays.
+However the most popular dark web is enabled by the Tor	software. Tor - standing
+for The Onion Router - is the software that provides its users a strong layer of 
+anonymity and online privacy. 
 
-From a practical perspective, - from your perspective - you just need to replace
-your web browser (say, internet explorer/chrome/safari) by a browser that routes
-the web traffic through the Tor network. That's it. You then go ahead and browse through the same 
-websites than before and keep using the internet as always. This time though, you are 
-assured that no one can track your behaviour online without your consent. 
-There are other ways to route the traffic through the Tor network so that not
-only your sites activity is protected, but also which apps you are using and
-which devices at your home are connected to the internet. At the end of the talk,
-I will give you more hints about how to get that done too!
+Basically, accessing the internet through Tor is not different from what we are
+all used to. The easiest way to access it is to install a pre-configured browser
+and that's pretty much it. So let's see how the Tor software works.
 
-To understand how can Tor protect our data - as well as being used for the dark
-web - let's briefly take a look on how it works.
+But first, meet Bob.
 
-But first, please take a few moments to breath and bear with me through the next
-more technical 5 minutes. Technical details are complicated and not always 
-black and white and even the experts and maintainers of these technologies 
-recognise the complexity of these. Let's really briwfly try to understand how
-Tor works.
+**show slide**
 
-> Tor brief tech explanation
+Bob is just like anyone of us. He's been using the internet for a long time and 
+part of his morning routine is to drink a coffee while reading the news at 
+www.news.com website.
 
-Tor can protect you from traffic analysis. Traffic analysis consists of tracking
-your online bahaviour based on the websites and services you use, and from 
-which location. With this information, websites are able to discriminate you, 
-corporations may acquire information about you and your family that you may not 
-feel confortable with and governaments may
+**show slide**
 
-Tor can protect your metadata. Metadata consists of ... 
-At first, metadata harvesting might not seem dangerous but ...
-As Michael Hayden, former NSA-Director once said, "We kill People based on Metadata"
+News.com Co. is using a bunch of trackers that get a lot of information about
+Bob's behavior on the website. Information about his location, devices in which
+he accesses the webpage, what content he usually checks, etc. All this data can
+be used to put together an incredible accurate profile of Bob, his political 
+affiliations, ideology, family status, etc.. Although everyone trust New.com 
+Co., no one is really sure if the company will eventually be acquired by some
+one less trustworthy, or if the company may be hacked and all Bob's information
+will be sold to criminals. Anyways, Bob might not even be aware that News.com
+has all this information about himself.
 
-Thus to this characteristics, Tor is effective against internet censorship, in
-which users can access destination and content which would be restricted by
-governaments or ISPs.
+**show slide**
 
-End-to-end encription is equaly important. Unfortunately, we cannot rely on
-current websites and apps to do that for us.
+Not only News.com can get personal and sensitive data about Bob. The government
+and other actors can also tap into the communication between Bob and New.com. As
+a matter of fact, they can tap into the communication between Bob and any other
+website and app. 
+
+**show slide**
+
+Basically, only by visiting the websites and using apps, Bob is leaking his 
+personal data and being tracked by many different entities. Those entities
+create and store an accurate profile of Bob.
+
+**show slide**
+
+One day, Bob watched a TED talk about the dark web and the Tor network. He got
+more aware of how he was being exposed nowadays to personal data leaks and he
+decided to start using Tor. For that, he installed the Tor browser and, as
+usual, visited his favorite news.com website.
+
+**show slide**
+
+But this time, news.com doesn't really know that the request comes from Bob,
+because the Tor network shuffles his request within many different computers in
+the network. This makes it impossible for the news.com website to track and
+collect Bob's data/
+
+**show slide**
+
+Others also got confused because they see that Bob is only sending requests to
+one address. For all the websites Bob visits, he's sending his request through
+the Tor network. This makes it impossible for governments and bad actors to
+understand what is Bob up to. 
+
+**show slide**
+
+The basic idea is that the all connections will go through the Tor 
+network, which will shuffle them. So it becomes almost impossible to understand 
+who is accessing what, making it hard for websites and bad actors to track users
+and discriminate them based on their profile or use that information in harmful 
+ways.
+
+With this simple example, it's clear that all we need to start protecting our 
+personal data is to install and use a special browser. It's also clear that
+being connected to the internet with Tor allows you to visit normal websites you 
+are used to, instead of any sketchy dark web and criminal website. Many of those
+criminal websites are not even listed on the normal search engines such as
+google. So you won't just stumble upon them any ways.
+
+It is easy to understand why the Tor network is the preferred way for criminals
+to operate. But then again, technologies are not intrinsically good of bad, it
+all depends on how it is used. And researches have shown that the big bulk of
+the traffic that goes through the Tor network is connecting to legit
+non-criminal websites. So, not only Tor can protect your online data, it's
+already doing it for many people!
 
 ## Why should you use Tor?
 
-So now that we know more about what the dark web is and how it is different 
-from the technologies that enable it, such as Tor, the next question is why 
-should you care about them? This is, in my opinion, the most interesting part of
- the discussion.
+So now that we know what the dark web is and that there is a difference between
+technologies that enable it and its use, the next question is why should you
+even care? This is, in my opinion, the most interesting part of the discussion.
 
-The first reason is that internet providers and governaments have the tools and
-the will to track the online behaviour of its users and citizens, respectively.
+In a nutshell, the reason why you should use Tor is privacy, personal protection
+and economics. But let's see in more detail few reasons why you should use the
+same technology that powers the dark web for yours and society's benefits.
+
+The first reason is that internet providers and governments have the tools and
+the will to track online behavior of users and citizens, respectively.
 This is a fact and it was demonstrated by the documents leaked by Snowden and
 Manning about internet surveillance programs carried out by the US and EU intelligent
-services. While you may not be concerned about the fact that your governament may
-be able to collect all your online activity - and of your families - because you
-trust it, remember that the data is not only collected but also stored. With the
-current volatility in our society, are we able to ensure that sensitive data 
-about ourselves and our families will not be used against us in the future? We 
-do not and should not have to take that risk.
+services. You may trust your government and thus not be concerned about the
+fact that your government is able to collect all your online activity - and of
+your families. Remember though, that the data is not only collected but also
+stored, and with the current volatility in our society, are we able to ensure
+that sensitive data about ourselves and our families will not be used against us
+in the future by some sketchy people that got to govern us? We do not need nor
+have to take that risk.
 
 Another reason is essentially that our lives are more connected than ever. The
-so called internet of things revolution and smart devices just came to increase 
-the amount of sensitive data leaks, which we are not even aware of.
+danger of having more devices in our home connected to the internet is that it
+opens doors to surveillance and targeted attacks. Unfortunately there have been
+cases of attackers being able to speak to a baby through babycam which is
+connected to the internet.
+Apart from those targeted attacks, the fact that we are more connected than even
+gives companies and malintented organizations the capabilities to
+harvest more and more data about our private data. Where do we usually access
+the internet? Which websites do we use the most? What are our interests? Which
+services do we use? All this data can be easily harvested and ultimately put
+together to make a accurate profile of who we are. This data can easily be used
+for business purposes without our consent, discrimination and criminal purposes.
 
-> Concrete example here
+Technologies like Tor create a privacy layer which allows you to protect your
+online privacy and sensitive data leaks.
 
-This gives companies and malintented organizations the capabilities to 
-harvest more and more data about our private data. Where do we usually access 
-the internet? Which websites do we use the most? What are our interests? Which 
-services do we use? All this data can be easily harvested and ultimately put 
-together to make a accurate profile of who we are. This data can easily be used 
-for business purposes without our consent, discrimination and or criminal 
-purposes. 
-For example, It's easier than ever for personal information to be collected and exploited by 
-ad companies and other corporations. Almost half of all websites roughly 99% of 
-popular news sites have tracking software installed on their 
-webpages [1][2]. These trackers can reveal your identity, health and income
-data, or where you live. 
-
-The 3rd point I'd like to make is economics. Using these technologies is 
-basically making ilicit data harvesting hard. So hard that it becomes inviable
-to do so. It's all about economics: if hackers and big companies cannot harvest 
-illegally people's data because it is protected,
-then it becomes just too expensive for them to do so. It becomes too expensive
-for companies like Cambridge Analytica to profile people's based on their data
-in order to change the course of democraric elections. Or it becomes realy
-expensive for rogue governaments to spy on their citizens looking for
-opportunities to silent regime or moral oppositors. Same goes for hackers who 
+The 3rd point I'd like to make is economics. Using these technologies is
+basically making illicit data harvesting hard. So hard that it becomes nonviable
+to do so. It's all about economics: if we all make it hard for attackers and
+companies to illegally gather people's data, then it becomes just too
+expensive for them to do so. It becomes too expensive for companies like
+Cambridge Analytica to profile people's based on their data
+in order to change the course of democratic elections. Or it becomes really
+expensive for rogue governments to spy on their citizens looking for
+opportunities to silent regime or moral oppositors. Same goes for hackers who
 are selling your data to the highest bidder.
-If enough people turn on their privacy shields on, then all those business
-models will not make sense and our society gives a step forward!
-So it becomes almost an ethically and moral imperative to protect your personal data. 
+If enough people turn their privacy shields on, then all that business model
+will just not work and our society gives a step forward!
+So it becomes almost an ethically and moral imperative to protect your personal data.
 Not only for yourself, but for a fairer and more secure online society.
 
 If you are still not convinced and you still don't see a reason why you nor
-anyone else should use technologies that allow them to be anonymous online,
-think about the journalists, whiteleblowers, political dissidents, NGOs and
+anyone else should use technologies that hide user's online activity,
+think about the journalists, whistle blowers, political dissidents, NGOs and
 other citizens at risk that use Tor to communicate and share information safely,
- without being traced by potential rogue governaments or any malintended actors
-- such as paid hackers. 
+without being traced by potential rogue governments or any malintended actors.
+In those cases, it is life threatening to use the internet without the
+privacy and security provided by Tor.
 
 ### How can you benefit from those technologies
 
-(..) So at this point you are asking yourself: what practical steps can I take in
-order to start protecting myself, my family and use these technologies?
+At this point you are asking yourself how can I join Bob and use Tor for my own
+benefit? 
 
-Tor does not solve all the problems. It only protects the transport of data.
-
-And how can you do it? With the help of technologies that -- unfortunately --
-also power the dark web.
-
-A very good guide by The Citizen Lab from the University of Toronto called
-Security Planner (https://securityplanner.org/) <show in slides>. There you can
-find really good guides and easy guides to help youi protect your data and setup
-the Tor browsers in your desktop and Android or Apple device.
+<slide>
+A very good starting point is the Security Planner guide by The Citizen Lab 
+from the University of Toronto. There you can find really easy explanations on
+how to install Tor on your laptop and mobile phone. And because Tor does not 
+solve all online privacy and security problems, you can also find much more 
+information about encrypting your connections, safe password management, etc.
 
 ### Wrap up
 
-The technologies that power the dark web are exactly that: technologies. 
-Instead of being afraid of their misuse, it's up to us to use them in a way that
-takes society forward in terms of freedom, privacy and security.
+By now, I truly hope you more afraid than 15m ago of the interconnected world we live in
+and the immense possibilities for our personal data to be exploited and used
+against us and our society. That is a good thing, since from fear comes action!
+Now that we all know how to better protect our sensitive and personal data
+online, let's take a step forward and leverage the technologies that enable the 
+dark web, in our own benefit. And let's remember that 
+technology is just technology! Instead of being afraid of their misuse, it's up 
+to us to use them in a way that takes society forward in terms of freedom, 
+privacy and security.
 
 
-[1] https://w3techs.com/technologies/details/ce-persistentcookies/all/all 
-[2] https://blog.mozilla.org/firefox/files/2017/09/tracking-protection-test.pdf
-
+**more comments**
+- I don't have any real case scenario about how data tracking by websites and
+  governments/hackers can be really bad. Add it?
 
 
 ## Notes/ideas/etc..
