@@ -9,54 +9,63 @@ the good or bad, but that does not make it inherently good or bad, 2) protecting
 
 ## Script
 
-What do oppositors of oppressive regimes, citizens concerned with personal 
-privacy and child pornography industry have in common? They are all using the 
-same technology to access the internet anonymously. The 
-same technologies that are used by criminals to buy and sell drugs online are
-also empowering social progressive agendas and protect citizens' private life.
+Good evening! Let me ask you how many of you here have accessed 
+the dark web before? Oh, I see one, two, me. Not that many.. To be honest, I'd 
+love to see many more hands raised! I know, it sounds weird, right? Isn't the
+dark web the place where criminals do their businesses online!? But do you know 
+what do oppositors of oppressive regimes, people concerned with their personal 
+privacy and for example, the child pornography industry have in common? They are
+all using the same technology to access the internet anonymously. Exactly, the
+same technologies that are used by criminals to buy and sell drugs online are also 
+empowering social progressive agendas and protect citizens' private life.
 
-The dark web is a scary topic. However, there is a lot of misinformation and 
-preconception about the dark web and its technologies. At this point you are 
-probably thinking ... **joke** ...
+It's easy to understand why between fear and skepticism, we usually miss the 
+point that the same technology that allows the so called dark web to thrive, 
+can also help us to
+protect our data from bad actors and corporations. I know that the dark web is a
+scary topic. However, there is a lot of misinformation and preconception about 
+the dark web and its technologies. At this point you are probably thinking 
+... **joke** ...
 
 I'm pretty sure that you are imagining the dark web as a sketchy place. And you 
 are right! There are online drug stores aplenty and anyone can easily find 
 stolen credit card on sale, for example. However, I'm not an 
 advocate of the illegal businesses going on the dark web. I'm here show how we
-all can use dark web technology to protect ourselves and our society with the
-same technology that allow criminals to create the sketchy dark web. In the end,
-the technology is just a tool. It can be used for good or bad, and  it's up to 
-us decide how to use it.
+all can use dark web technology to protect ourselves. I want to show you
+that at the end of the day, the technology is just a tool. It can be used for 
+good or bad, and it's up to us decide how to use it.
 
 I'm pretty sure that at this point, you are really skeptical about all of this.
-Who's skeptical at this point? Raise your hands. As expected, I see many raised
-hands ... **possibly another joke** ...
-
-**something missing here?**
-
-> slide with 3 next points, maybe? 
-
-To clear this up, I'd like to show you the difference between the dark web and
-the technologies that enable it. And also, I want to lay out the reasons why you
-can and should use those technologies. Finally, I want to show how you can 
-use them on a daily basis to protect yourself and your family.
+So today I'd like to address the skepticism around this subject. We will discuss
+the difference between the dark web and the technologies that enable it. And why
+you should even considering using them. Hopefully towards the end you will agree
+with me that using dark web technologies on a daily basis can be beneficial for
+you and our society, so I will quickly give you some tips on how to get you
+plugged in.
 
 ###  What is the darkweb
 
-Let's start with the first question: what is the dark web and which technologies
-enable it?
+> Feedback: I know that people don't care if they don't understand, so...
 
-A dark web is just like the normal internet that we are used to, but it can be 
-accessed only with specific software and configurations. 
+But let's start with the first question: what is the dark web and what 
+technologies make it possible and why, exactly?
+
+You can see the dark web just like the internet that we are used to. However, it
+can be accessed only with specific software and configurations which allows you
+to become practically anonymous when using the internet. Moreover, it also
+allows you access to websites - the called hidden services - that are not listed
+in the usual search engines, like Google.
 
 Under this definition, there are multiple dark webs in use nowadays.
 However the most popular dark web is enabled by the Tor	software. Tor - standing
-for The Onion Router - is the software that provides its users a strong layer of 
-anonymity and online privacy. 
+for The Onion Router - is a software that provides its users a strong layer of 
+anonymity by hiding all data from its users and websites. 
 
 Basically, accessing the internet through Tor is not different from what we are
 all used to. The easiest way to access it is to install a pre-configured browser
 and that's pretty much it. So let's see how the Tor software works.
+
+> Feedback: maybe a bridge here?
 
 But first, meet Bob.
 
@@ -91,9 +100,15 @@ Basically, only by visiting the websites and using apps, Bob is leaking his
 personal data and being tracked by many different entities. Those entities
 create and store an accurate profile of Bob.
 
+> Feedback: list of tracking in one slide and give more importance to it. Maybe
+> briefly tell about real cases that happened
+
+> Feedback: list of 'entities' that might be interested in our private data and
+> reasons for that 
+
 **show slide**
 
-One day, Bob watched a TED talk about the dark web and the Tor network. He got
+One day, Bob watched a TEDx talk about the dark web and the Tor network. He got
 more aware of how he was being exposed nowadays to personal data leaks and he
 decided to start using Tor. For that, he installed the Tor browser and, as
 usual, visited his favorite news.com website.
@@ -106,6 +121,8 @@ the network. This makes it impossible for the news.com website to track and
 collect Bob's data/
 
 **show slide**
+
+> Feedback: Anyone who tries to track Bob's behavior 
 
 Others also got confused because they see that Bob is only sending requests to
 one address. For all the websites Bob visits, he's sending his request through
@@ -200,6 +217,10 @@ privacy and security provided by Tor.
 At this point you are asking yourself how can I join Bob and use Tor for my own
 benefit? 
 
+> Feedback: Using the dark web to protect your data is not the difficult part: 
+> just go ahead and google how to download the Tor browser. Changing the bad 
+> practices online is the difficult part.
+
 <slide>
 A very good starting point is the Security Planner guide by The Citizen Lab 
 from the University of Toronto. There you can find really easy explanations on
@@ -209,16 +230,18 @@ information about encrypting your connections, safe password management, etc.
 
 ### Wrap up
 
-By now, I truly hope you more afraid than 15m ago of the interconnected world we live in
+By now, I truly hope you more afraid than 15m ago of the interconnected world we
+live in
 and the immense possibilities for our personal data to be exploited and used
 against us and our society. That is a good thing, since from fear comes action!
 Now that we all know how to better protect our sensitive and personal data
 online, let's take a step forward and leverage the technologies that enable the 
-dark web, in our own benefit. And let's remember that 
-technology is just technology! Instead of being afraid of their misuse, it's up 
+dark web, in our own benefit. And let's remember that any 
+technology is just a tool! Instead of being afraid of its misuse, it's up 
 to us to use them in a way that takes society forward in terms of freedom, 
 privacy and security.
 
+Thank you!
 
 **more comments**
 - I don't have any real case scenario about how data tracking by websites and
