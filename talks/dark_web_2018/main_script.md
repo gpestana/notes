@@ -9,15 +9,18 @@ the good or bad, but that does not make it inherently good or bad, 2) protecting
 
 ## Script
 
-Good evening! Let me ask you how many of you here have accessed 
+Good evening! Let me ask how many of you here have accessed 
 the dark web before? Oh, I see one, two, me. Not that many.. To be honest, I'd 
-love to see many more hands raised! I know, it sounds weird, right? Isn't the
-dark web the place where criminals do their businesses online!? But do you know 
-what do oppositors of oppressive regimes, people concerned with their personal 
+really like to see many more hands raised! I know, it sounds weird, right? Isn't the
+dark web the place where criminals do their businesses online!? 
+
+That might be true, but do you know 
+what do opponents of oppressive regimes, people concerned with their personal 
 privacy and for example, the child pornography industry have in common? They are
 all using the same technology to access the internet anonymously. Exactly, the
 same technologies that are used by criminals to buy and sell drugs online are also 
-empowering social progressive agendas and protect citizens' private life.
+empowering social progressive agendas and protecting peoples' private life
+online.
 
 It's easy to understand why between fear and skepticism, we usually miss the 
 point that the same technology that allows the so called dark web to thrive, 
@@ -36,8 +39,9 @@ all can use dark web technology to protect ourselves. I want to show you
 that at the end of the day, the technology is just a tool. It can be used for 
 good or bad, and it's up to us decide how to use it.
 
-I'm pretty sure that at this point, you are really skeptical about all of this.
-So today I'd like to address the skepticism around this subject. We will discuss
+I'm pretty sure that at this point, you are really skeptical about the fact that
+the dark web should be used by all of us. I'd like today to address the
+skepticism and debunk some myths about the dark web. We will discuss
 the difference between the dark web and the technologies that enable it. And why
 you should even considering using them. Hopefully towards the end you will agree
 with me that using dark web technologies on a daily basis can be beneficial for
@@ -122,15 +126,13 @@ one address. For all the websites Bob visits, he's sending his request through
 the Tor network. This makes it impossible for governments and bad actors to
 understand what is Bob up to. 
 
-**show slide 9**
-
 The basic idea is that the all connections will go through the Tor 
 network, which will shuffle them. So it becomes almost impossible to understand 
 who is accessing what, making it hard for websites and bad actors to track users
 and discriminate them based on their profile or use that information in harmful 
 ways.
 
-With this simple example, it's clear that all we need to start protecting our 
+It's clear that all we need to start protecting our 
 personal data is to install and use a special browser. It's also clear that
 being connected to the internet with Tor allows you to visit normal websites you 
 are used to, instead of any sketchy dark web and criminal website. Many of those
@@ -178,7 +180,7 @@ people to circumvent state censorship and help people to remain anonymous while
 fighting for their rights - either as a journalist reporting on human right 
 violations or as a political dissident fighting for a fairer society.
 
-**show slide 10**
+**show slide 9**
 
 Many people and activists have raised concerns about the current state of
 the internet and what it mean for our privacy. 
