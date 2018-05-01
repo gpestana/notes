@@ -1,60 +1,62 @@
-## Meta
+The internet can be a dangerous place
 
-```
-The main goal of the talk is to raise awareness about the importance for common internet users to protect their data and footprints online (e.g. metadata), in order to protect their privacy and freedom online. The twist is that the same
-technologies that can protect our privacy and citizens at risk (political and digital dissidents, citizens at risk), is also powering the so called dark web. Thus, complementary goals are to 1) highlight that technology can be used for 
-the good or bad, but that does not make it inherently good or bad, 2) protecting personal data and privacy means protecting everyone's rights and freedom and 3) thast it is easy to start using the technologies and contribute.
-```
+ByLock case
+
+<show slide coup> On 15th of July of 2016 close to midnight, military flight jets were witnessed flying over Ankara, Turkey, It was the beginning of a 2 day coup attempt to remove Erdogan and his government from power. The coup failed, and on those 2 days alone more than 260 people died; This event was followed by a crack down on the people the government believed were behind the failed coup. 
+As part of measures to bring the organizers of the failed coup to justice, the Turkish court ruled that using a messaging app called ByLock was enough evidence to link the user to the group. Under this argument, the government charged and put to prison thousands of people accused of treason.
+<show slide bylock app> ByLock was a messaging app just like WhatsApp and Telegram which was allegedly used by the organizers of the coup. But thousands of those who were accused of using the app, where shocked with the accusations and pledged innocence: many of them had never heard about the app before and had no affiliation whatsoever with the group.
+<show slide news bylock> A computer security forensics expert have found that about 11 thousand people charged on the ByLock case were innocent. What had happened was that other apps installed in their phones were redirecting them to the ByLock server, without people's knowledge. This was discovered as being a diversion maneuver set up by the group who organized the coup so thal;p0ot the government could not use the usage of ByLock as evidence.
+So 11 thousand innocent people were put to prison because their phones were hacked by the coup group, while their government was spying on what they were doing online.
+<show slide the internet is dangerous>The ByLock case shows that the internet is a dangerous place. Its complexity and lack of mechanisms to ensure our privacy online leaves us, citizens, powerless and in the hands of criminals, corporations and governments. 
+the internet is dangerous
+
+<show slide type of data> When using the internet, we leak information about ourselves and our behaviour in every actions we do. Data about  “who am I talking to and which online content I am accessing to? from and to where?; from which physical locations; and which devices I use. This data is being collected at a massive scale by government, corporations and potentially criminals. 
+
+It is not a matter of whether you or your family explicitly share this information on social media. This happens regardless of whether you give consent or not. In the current internet, there is no mechanism in place to protect us from these vulnerabilities. And what this means in practice has a profound impact on our society: think about how Cambridge Analytica has influenced the US elections based on data collected from millions of Americans. That's what the internet is turning into - a place for those who have political and economical power to collect and use our data to maintain and gain power. And we are feeding all this, whether we want or not.
 
 
-## Script
+solution - dark web
 
-slides draft: https://docs.google.com/presentation/d/1f-HhuJqqKO0G-0KopLZHdfpTuEKwuW9_MSoh3m-FIFM/edit#slide=id.g38b3090606_2_3
+<show slide solution> I believe that online privacy is the foundation for a free and fair internet, which is becoming interchangeable with a free and fair society. I'm passionate about building a better and safer internet, so today I'm here to tell how we can fix this problem. 
 
-Good evening! How many of you have ever heard about the dark web? Alright, some people… From these, how many of you have used it? I see one, two, me. Not that many.. To be honest, I'd really like to see many more hands raised! I know that suggesting to use the dark web may sounds wrong since many people think of it as the place for criminals to do their businesses online.
-And that is true! But the fact is that not only the child pornography industry or drug dealers use the dark web. People concerned with their personal privacy are also using dark web technology to protect their online privacy. The technologies that are used by criminals to buy and sell drugs online are also empowering social progressive agendas and protecting people's private life online.
-I know that the dark web is a scary topic. When I first learned about it, I had mixed feelings of curiosity and fear. Over time, I understood that there is a lot of misinformation and preconceptions about the the dark web and its technologies. As I became more concerned with the way my personal data is being collected online, I started to look at the dark web technologies as an answer to an important problem: that we are all leaking way too much information about ourselves and our behaviour online, with potentially bad consequences for us and our society.
-show slide (dark web user)
-You may imagine the dark web as a sketchy place. And you are right! There are plenty of online drug stores and anyone can easily find stolen credit card for sale, for example. However, I'm not an advocate of the illegal businesses going on the dark web. I'm here to show how we all can use dark web technology to protect ourselves and our society. At the end of the day, the technology is just a tool: it can be used for good or bad, and it's up to us decide how to use it.
-You are probably skeptical about the idea of using the dark web. I'd like to address the skepticism and discuss the difference between the dark web and the technologies that enable it and why you or anyone should even considering using them. Hopefully towards the end you will agree with me that using dark web technologies on a daily basis can be beneficial for you and our society, so I will quickly give you some tips on how to get start using it.
+But let me be upfront with you: The solution I'm going to propose is controversial. Based on research, 7 out of 10 people believe it should not exist. The media usually portraits it as "the dark corners of the internet" and "disturbing technology".
 
-But let's start by exploring what is the dark web and what technologies make it possible.
-You can see the dark web just like the internet that we are used to. However, its websites can be accessed only with specific software and configurations. This software allows you to become practically anonymous when using the internet. It also allows you access to websites that are not listed in the usual search engines, like Google.
-show slide (Tor)
-Under this definition, there are multiple dark webs nowadays. However the most popular dark web is enabled by the Tor software. Tor - standing for The Onion Router - is a software that provides its users a strong layer of anonymity by hiding all data from its users and websites. Tor was originally created by the US military with the primary purpose of protecting government communications. But with the time, it became much more than that. Nowadays, it is an open source project used by millions of people.
-I use the dark web on a daily basis. And I do it because I know what it means not to use it. When any of us visit a website, there is a lot of data about ourselves and our behavior that is leaked and collected by different people, even without our consent or being aware about it.
-I read a lot of news online. Let's see what happens when I visit news.com website to check the latest news.
-show slide (visit news.com)
-News.com will be able to understand where I am accessing the website from. It will know from which device, configurations and which content I visit often. All this data is collected, stored and eventually correlated with data from my previous visits or even with data other websites have gathered about me and sold to news.com. 
-show slide (data gathered from me)
-Eventually, news.com is able to build an incredibly accurate profile about me and my behavior online, while I have no idea that my data is being collected nor how it will be used.
-And it is not only news.com or other websites which are interested on my personal data.
-show slide (threat actors)
-Internet service providers, criminals and even nation states - which we'll call threat actors in this context - also have the capabilities and the willingness to analyse my traffic online: which websites I visit, what content I read, where do I read it from and when, for example.
-So here I am, using the internet as everyone else and leaking massive amounts of data about myself to corporations, governments and potentially criminals. This data can be used to influence my decisions, to discriminate me my family, for commercial and even censorship purposes.
-The dark web - and particularly Tor - can protect us from threat actors who try to analyse my online traffic.
-show slide (Tor and threat actors confused)
-The basic idea about the Tor network is that it maintains a network of computers that shuffles and encrypts our connections to websites and apps. This way, threat actors cannot understand what I'm up to online. Through Tor, I'm in control of what data I want to disclose about me online.
-I decided to use dark web technologies everyday because I believe that my personal and private life matters. I'm also aware that our data in the wrong hands can be harmful for us as individuals and for our society.
-show slide (cambridge analytica)
-We recently learned that our personal data can change the course of democratic elections. Just think about the case of how Cambridge Analytica used data of millions of people to influence the US elections. 
-As individuals, by protecting our private data we are effectively protecting our freedom of speech and right for privacy. Collectively, protecting our data has a powerful effect that can be a game changer. It's all about economics: if we make it really hard and expensive for corporations to collect our online data, the whole business model based on our personal and private data becomes nonviable. In such a world, the society takes a huge step forward towards a less discriminatory society where everyone's privacy is protected.
-show slide (turkey bylock)
-Not only corporations are gathering and using our online private data without our consent. Recently, the Turkish government put to prison thousands of innocent people based on the fact they visited a messaging website, under the suspicion that whoever would use that website, would be part of the organizers of the failed coupe of 2016. These people lost their jobs and were marginalized in their communities, while many of them didn't even know they ever visited the website. This situation happen because we are all leaking too much information about what we do online.
-Western states, too, are capable and willing to put its citizens under massive online surveillance. Remember about the leaked documents by former CIA and NSA employees showing the online surveillance programs that US and western european countries have ongoing. As we speak, those programs are collecting, storing and analysing in a systematic way or behavior online on a really precise and individual level. And what do nation states do with that data?
-show slide (kill people based on meta)
-Well, as the former director of the US National Security Agency once said publicly, the US government is killing people based on private data gathered online, for example. 
-As Edward Snowden former NSA employee and one of the people who let the world know about the mass surveillance programs carried by nation states once said that "Without Tor, the streets of the internet become like the streets of a very heavily surveilled city. [...] With Tor, we have private spaces and private lives." 
-show slide (citizens at risk)
-The dark web can be used to protect our private lives, but it is also used to help citizens at risk in many different ways: the dark web technologies are protecting human rights all over the world. Millions of people have their access to websites, such as Wikipedia, blocked by their governments. Tor helps circumventing the state-wide censorship mechanisms. 
-Journalists working on critical cases, political dissidents and people encouraging social change and political reforms may have their lives dependent on remaining anonymous online. These people often put themselves into dangerous situations for the common good, and use the dark web to protect their lives.
-Basically, Tor and dark web technologies have the power to put us back in control about what personal information do we want to disclose and to whom, regardless of whether we are a political dissident, an anonymous blogger in a country that prosecutes different ideologies or a mother living and working in Helsinki.
+But for big problems, we need bold solutions: I believe that one of the solutions for the current state of the internet is the dark web. <show slide solution darkweb>  I'm telling you this as a person who not only uses the dark web on a daily basis but also actively contributes for it to keep running.
 
-If you want to join me and millions of other people as a dark web users, a good starting point to protect your online privacy is to install and use the Tor browser to access the internet. The Tor browser comes with all the configurations to route the traffic through the Tor network out of the box. It's as simple as that!   
-I'd suggest you to check the Security Planner guide by The Citizen Lab from the University of Toronto. There you can find how to install Tor on your computer and mobile phone. And because Tor does not solve all online privacy and security problems, you can also find much more about how to effectively protect your personal data.
+what is the dark web 
 
-Instead of thinking of the dark web as the internet for criminals, let's think of it as a way to protect our private lives, protect journalists and political dissidents and where citizens can circumvent online censorship. Remember that any technology is just a tool: instead of being afraid of its misuse, it's up to us to use them in a way that takes society forward in terms of freedom, privacy and security.
+If you heard about the dark web before, you might be skeptical about this idea. If the dark web is completely new to you, I'm sure you can't help but think that even the name is somewhat scared. But before we jump to conclusions - let's see what the dark web is. 
+
+<show slide internet-darkweb> The dark web is a network within the normal internet which adds all the privacy features that are missing by default. To access the dark web, you need specific software. This software allows you to visit the normal internet and websites which can only be accessed through dark web software.
+Under this definition, there are multiple dark webs nowadays, however the most popular dark web is created by the Tor software<show slide Tor>. Tor - standing for The Onion Router - is the network that provides a strong layer of anonymity to anyone who's using it. Tor was originally created by the US military with the primary purpose of protecting government communications. But with the time, it became much more than that: nowadays, it is an open source project used by millions of people trying to protect their privacy online.
+But how does the dark web solve the privacy vulnerabilities of the internet?
+
+Let's imagine the internet like a Tennis match  <show slide internet Tennis>. Users and websites exchange messages - the balls - with each other.  While the match goes on, the audience - threat actors such as governments, corporations and criminals - are watching who is exchanging balls, at what time, for how long and so on and recording everything in their log books.
+
+<show slide ball thrower>The Tor network works like a Tennis thrower machine. We install a browser that forwards our connections to the thrower machine. At the same time, thousands of other people are doing the same: using the Tor browser and sending their balls to the same machine bucket. The machine then shuffles all the balls and delivers them to the right player - the websites and users to which the balls should be sent to. The threat actors who are watching the matches will be confused and lose track about who are exchanging balls and cannot fill their log book based on what they see. The Tennis thrower machine does a good job at masking where our connections are going to - basically our behaviour online. Just by installing and using the Tor browser, we can access Google, twitter, the bylock app or Wikipedia and all information we are giving out is that we are using the Tennis thrower machine, just like many other people.
+
+As an user, all you need to do is to install the Tor browser and access visit the websites through it. Many people are afraid of stumbling upon criminal websites when accessing the internet through the dark web. We we saw from this example, you are in control of what you do and what websites you visit.
+
+what we gain with the dark web
+
+<show dark web crime slide>  The dark web is often accused of letting the child pronography industry, drug dealers and other criminals to do their businesses online. It is true that the anonymity provided by the dark web technologies are an important asset for criminals. But that's a shortsighted way of looking at technology: <show cash analogy slide> Cash money can also be used anonymously to fund terrorism. However, it was one of the most transformative technologies ever invented by humans. Think of the dark web as just a tool: it's up to us to decide how to use it. And many people are using it the right way. As a matter of fact, research as shown that the bulk of the traffic going through Tor is for legit websites that you and me would not feel uncomfortable visiting.
+
+<show slide data collection/mass surveillance > With dark web technologies like Tor, we can protect our private data from corporations, criminals and governments who are willing to use it to discriminate and influence us. The dark web protects our personal privacy.
+
+<show slide censorship > With dark web technologies like Tor, people can bypass censorship imposed by governments. In Syria, Turkey, China and many other countries, people cannot visit Wikipedia or access to specific political and ideological content online is blocked. The dark web protects our freedom of access to information.
+
+<show slide journalists, political activists > With dark web technologies like Tor, we can protect journalists, whistleblowers and political activist. People like Edward Snowden who revealed the surveillance programs conducted by the US government and anonymous bloggers in oppressive regimes need to be protected. The dark web protects our freedom of speech.
+
+
+how can we use the dark web?
+
+<show slide security planner> And how about you? If you think that your private life matters, I challenge you to go ahead, download the Tor browser and start using it! The Security Planner guide by the University of Toronto will get you started at this, so go ahead and take a look at it.
+
+wrap up
+
+<show Edward Snowden slide> As Edward Snowden said that the "Without Tor, the streets of the internet become like the streets of a very heavily surveilled city. [...] With Tor, we have private spaces and private lives."
+
+Instead of thinking of the dark web as the internet for criminals, let's think of it as a way to protect our private lives online. The normal internet is what we should be concerned with: controlled by big corporations and governments it is ripe for mass surveillance, collecting private data for business purposes and prone to censorship. 
+Join me by using dark web to make the internet a better place: a place that takes society forward in terms of freedom, privacy and security. <show cat slide gif>
 Thank you!
-
-
 
