@@ -1,5 +1,3 @@
-## brain dump
+## notes
 
-ideas, notes, research, discussions, talks and discussions. 
-
-[gpestana](https://gpestana.com)
+[gpestana](https://gpestana.com) and [hashmatter](https://hashmatter.com)
