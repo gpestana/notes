@@ -30,6 +30,11 @@ trust model in which peers share trust scores to their trusted peers. the trust
 scores of a peer web of trust are used to avoid spammers and allow trusted peers
 to communicate
 
-**CENO**
+**CENO and the freenet overlay**: CENO relied on freenet to cache and distribute
+content anonymously and in many geographical locations, making it a good scheme
+for circumventing censorship. when content is stored in freenet through
+`bridges`, it will be automatically replicated and stored anonymously. content
+consumers can access the content through freenet client anonymously and in case
+of censorship, peers can circumvent it if the content is cached in hosts
+geographically not blocked by the government.
 
-// TODO: finish
