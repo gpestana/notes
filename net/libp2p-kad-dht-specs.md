@@ -88,6 +88,11 @@ The random generation of IDs to query ensures that the peer IDs in the local
 store are probabilistically spread across the keyspace.
 
 
+## S/Kademlia modifications
+
+The libp2p-dht-kad implements å
+
+
 ## Others
 - **Replication**
 - **Pinning/storing** (layer above?)
