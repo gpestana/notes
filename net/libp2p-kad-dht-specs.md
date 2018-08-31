@@ -31,6 +31,17 @@ This implementation of Kademlia does not set any requirements for the node ID
 definition. However, since this package implements the IPFS routing interface, 
 it is worth noting that in IPFS the node ID is a SHA256 multihash by default.
 
+## K-Bucket
+
+A Kademlia DHT maintains a routing table which defines the overlay network of
+each peer. A routing table contains a set of buckets called `k-buckets`. Each
+bucket stores contact information of network peers and holds at maximum `k` 
+number of contacts. In the current implementation, `k` is 20.
+
+[go-libp2p-kbucket](https://godoc.org/github.com/libp2p/go-libp2p-kbucket) 
+implements a Kademlia routing table which respects the `go-libp2p-kad-dht` 
+interface.
+
 ### Distance between peers
 
 ### Client and Server mode routing
@@ -39,22 +50,43 @@ The default mode for a DHT node is to serve any requests from network peers.
 However, it is possible to run in client mode in which the node will not respond
 to any DHT request.
 
-## K-Bucket
 
 ## Protocol
 
-### RPCs
+### Actions
 
-**PUT_VALUE**: request for a given peer to store a key-value.
+**PUT_VALUE**: RPC for a given peer to store a key-value.
 
-**GET_VALUE**: request for a given key ID to the network.
+**GET_VALUE**: RPC to query the network for a given key ID.
 
-**FIND_NODE**: requests a peer `p` is it knows about a peer with a specific key.
+**FIND_NODE**: RPC for asking peer `p` if it knows about a peer with a specific
+key ID.
 
-**GET_PROVIDERS**: requests a peer `p` if it knows which peers can provide a
-given object in the network (CID).
+**GET_PROVIDERS**: RPC for asking a peer `p` if it knows which peers can provide
+a given object in the network (CID).
+
+
+**ADD_PROVIDER**: RPC handler that adds peer `p` locally as a provider for a
+given content ID (CID).
+
+**PING**: RPC for requesting a `PONG` reply from a given peer. Deprecated.
 
 If any RPC takes longer than 1 minute, the operation times out.
+
+## Bootstrapping the DHT
+
+Bootrstapping the DHT consists of populating a fresh routing table and its 
+`k-buckets`with peer contacts. The bootstrapping method used is to query a 
+number of randomly generated IDs. The number of bootstrap queries is defined by
+the constant `NumBootstrapQueries`. 
+
+> Q: what is/are the initial peer/s to bootstrap from?
+
+> Q: how does the kbucket and peerstore play together? is there any overlap?
+
+The random generation of IDs to query ensures that the peer IDs in the local
+store are probabilistically spread across the keyspace.
+
 
 ## Others
 - **Replication**
@@ -77,11 +109,13 @@ bucket is higher than 1 minute, the peer is dropped and not added to the
 - **NumBootstrapQueries**: defines the number of bootstrap queries to construct
   a new routing table. Its value is 5.
 
+- **maxQueryConcurrency**: the maximum number of concurrent queries. Same value
+  as `AlphaValue`.
 
 ---
 
 ### WIP notes
 
-- nomenclature: peers vs nodes?
-- check `defaults` ()
-- an IpfsDHT node has a list of `protocols`. what are those and why a list?
+- [ ] nomenclature: peers vs nodes?
+- [ ] check `defaults` ()
+- [ ] an IpfsDHT node has a list of `protocols`. what are those and why a list?
