@@ -65,7 +65,6 @@ key ID.
 **GET_PROVIDERS**: RPC for asking a peer `p` if it knows which peers can provide
 a given object in the network (CID).
 
-
 **ADD_PROVIDER**: RPC handler that adds peer `p` locally as a provider for a
 given content ID (CID).
 
@@ -82,11 +81,48 @@ the constant `NumBootstrapQueries`.
 
 > Q: what is/are the initial peer/s to bootstrap from?
 
+After the bootstrapping is complete, the peer executes a DHT query with its own
+ID, so that it will distribute its personal info to neighbors.
+
+
+
 > Q: how does the kbucket and peerstore play together? is there any overlap?
 
 The random generation of IDs to query ensures that the peer IDs in the local
 store are probabilistically spread across the keyspace.
 
+## Finding the nearest peer
+
+### Peer distance metrics
+
+The metric used for calculating the distance between peers is based on the
+[[kad]](https://link.springer.com/chapter/10.1007/3-540-45748-8_5) original
+protocol, which defines distance between two peers `x` and `y` as the bitwise
+exclusive OR (XOR) of their IDs. The result of the operation is interpreted as
+an integer which defines the relative distance between peers; 
+
+### Flow
+
+The protocol used for peer `peer_local` to find the nearest peer `peer` is the 
+following:
+
+1) calculate the number of common leading zeros between `peer_local` ID and
+`peer` ID. This number indicates the k-bucket where the first nearest peer to 
+`peer` is located. If the number of common leading zeros exceeds the number of
+buckets in the routing table, select last bucket;
+
+2) get the first `count` (`AlphaValue` = 3) [why?] peers from the bucket
+selected in step 1) (Note: k-buckets organize the peers in descendent order of
+latency, as opposed to the kademlia paper [?]).
+
+3) If no peers were selected or there were no enough peers in the bucket to
+select `count` number of them, get peers from neighbor buckets. This may 
+happen in the case of bucket split or when bucket is short of peers.
+
+4) Sort the peers from step 2) , 3) based on the relative distance to
+target peer `peer` using the distance metric described above;
+
+5) Returns `count` number of peers closest to the target peer `peer`.
 
 ## S/Kademlia modifications
 
@@ -124,3 +160,8 @@ bucket is higher than 1 minute, the peer is dropped and not added to the
 - [ ] nomenclature: peers vs nodes?
 - [ ] check `defaults` ()
 - [ ] an IpfsDHT node has a list of `protocols`. what are those and why a list?
+- [ ] why IpfsSHT naming?
+- [ ] [routing.go:584] dht.routingTable.NearestPeers is called with
+  `AlphaValue` as the number of closest peers to return (`count`). `AlphaValue`
+is supposed to define the parallelism of the DHT. Why using AlphaValue in this
+context? 
