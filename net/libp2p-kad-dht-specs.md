@@ -38,11 +38,38 @@ each peer. A routing table contains a set of buckets called `k-buckets`. Each
 bucket stores contact information of network peers and holds at maximum `k` 
 number of contacts. In the current implementation, `k` is 20.
 
+A bucket organizes its peer contacts in descendant order of "activeness".
+When DHT node receives a message from another node, it updates the appropriate
+`k-bucket`. 
+
+- If the node exists in the routing table, move it to the front of the
+bucket. This heuristic will organize the contacts in the buckets so that the
+"more active" are first in the bucket.
+
+- If a new connection does not meet the defined latency requirements, skip it
+  and do not add it to the bucket.
+
+- If a new peer connection meet the latency requirements, add it to the bucket.
+  If the bucket is already full, it either splits it into two buckets or removes
+the peer in the tail of the bucket. 
+
+Note that the implementation of k-bucket used in this DHT organizes the contacts
+in descendant order in terms of their "activeness", as opposed to the
+original paper ([[kad]](https://link.springer.com/chapter/10.1007/3-540-45748-8_5),
+where the most active peers are stored in the tail of the bucket instead.
+
 [go-libp2p-kbucket](https://godoc.org/github.com/libp2p/go-libp2p-kbucket) 
 implements a Kademlia routing table which respects the `go-libp2p-kad-dht` 
 interface.
 
 ### Distance between peers
+
+The metric used for calculating the distance between peers is based on the
+[[kad]](https://link.springer.com/chapter/10.1007/3-540-45748-8_5) original
+protocol, which defines distance between two peers `x` and `y` as the bitwise
+exclusive OR (XOR) of their IDs (`distance(x, y) = x ^ y`). 
+The result of the operation is interpreted as
+an integer which defines the relative distance between peers.
 
 ### Client and Server mode routing
 
@@ -92,16 +119,6 @@ The random generation of IDs to query ensures that the peer IDs in the local
 store are probabilistically spread across the keyspace.
 
 ## Finding the nearest peer
-
-### Peer distance metrics
-
-The metric used for calculating the distance between peers is based on the
-[[kad]](https://link.springer.com/chapter/10.1007/3-540-45748-8_5) original
-protocol, which defines distance between two peers `x` and `y` as the bitwise
-exclusive OR (XOR) of their IDs. The result of the operation is interpreted as
-an integer which defines the relative distance between peers; 
-
-### Flow
 
 The protocol used for peer `peer_local` to find the nearest peer `peer` is the 
 following:
