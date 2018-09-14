@@ -1,4 +1,24 @@
-# libp2p kademlia DHT implementation specs
+The document is split into 3 sections: First, it summarizes how 
+[Kademlia DHT](https://link.springer.com/chapter/10.1007/3-540-45748-8_5) works
+ based on the original paper. Secondly, it describes the 
+[S/Kademlia](https://ieeexplore.ieee.org/document/4447808/) 
+modifications which enhance the original protocol security and finally it 
+describes the libp2p Kademlia implementation specs, which was defined based on
+work Kademlia andA/Kademlia.
+
+## Kademlia DHT
+
+Kademlia is a P2P distributed hash table which uses a XOR-based metric to
+calculate the distance between nodes and to define the network topology.
+
+### k-buckets and routing table 
+
+### Protocol
+
+
+## S/Kademlia DHT
+
+## libp2p kademlia DHT implementation specs
 
 [go-libp2p-kad-dht](github.com/libp2p/go-libp2p-kad-dht) is an Kademlia DHT which
 implements the IPFS routing interface. The implementation includes
