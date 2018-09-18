@@ -4,12 +4,94 @@ The document is split into 3 sections: First, it summarizes how
 [S/Kademlia](https://ieeexplore.ieee.org/document/4447808/) 
 modifications which enhance the original protocol security and finally it 
 describes the libp2p Kademlia implementation specs, which was defined based on
-work Kademlia andA/Kademlia.
+work Kademlia DHT with S/Kademlia modifications.
 
 ## Kademlia DHT
 
 Kademlia is a P2P distributed hash table which uses a XOR-based metric to
-calculate the distance between nodes and to define the network topology.
+calculate the distance between nodes.
+
+**system description**
+- each node has a 160 bits ID. The resources indexed in the DHT also have a key
+  of 160 bits. The space of node and resource key IDs overlap and the resource
+is stored in the nodes which have the closest ID;
+- the closeness metric between two nodes is calculated by bitwise XOR
+  operation;
+- the network topology is represented as a binary tree. Each node is a leaf in
+  the tree and their position in the tree depends on node ID.
+- routing tables is a set of k-buckets with information on how to reach other
+  nodes;
+
+**routing tables**: each node keeps and maintains a routing table, which is a
+set of tuples `<ip_addr, udp_port, node_id>` organized in several lists called
+k-buckets.
+
+A k-bucket is kept sorted by time in a way that the latest node seen is at the 
+tail of the list. The size of the k-buckets is at most `k` (usually `k = 20`).
+If a k-bucket is full and a new node is seen, the contact is either 1) added o
+the tail of the list if one contact from the k-bucket is unresponsive; 2) dropped
+or 2) the k-bucket is split into two.
+
+A k-bucket is split into two if the new ID falls into the bucket in which its
+own node ID is store and if the bucket is full.
+
+k-buckets give priority to the oldest nodes in order to maximize topology
+stability (the longer the node is up, the likelier it is to remain up) and thye
+provide some protection against DoS attacks by making sure that new nodes will
+not flush the k-buckets if there are older nodes in the network.
+
+**protocol**:  the protocol consists of four RPCs: `PING`, `STORE`, `FIND_NODE` 
+and `FIND_VALUE`.
+
+- `FIND_NODE(id)`: recipient returns `k` nodes it knows closest to the ID;
+- `FIND_VALUE(id)`: behaves like `FIND_NODE` but if the recipient has the value
+  stored locally, return it;
+- `STORE`: asks recipient to store a `KV` pair
+- `PING`: for checking node reachability and latency.
+
+The node lookup is performed by recursively selecting the closest node to a
+given ID (from either a local k-bucket or from responses from `FIND_NODE` RPC)
+and perform a `FIND_NODE` request. The network requests are done in parallel,
+based on a `alpha` value representing the degree of parallelism (usually 3).
+Value lookup uses the same algorithm.
+
+The performance of the algorithm can be improved by caching the `kv` along the
+lookup path. The cached entries expire at a rate inversely proportional to the
+distance from the closest ID.
+
+**bootstrapping**: to join the network, a new node needs at least one node its
+local routing table. It then performs a `FIND_NODE(own_id)` to start populating
+the routing table and letting other nodes know about itself.
+
+**key re-publishing**: keys are republished periodically to ensure persistence
+when nodes leave the network and that new nodes with IDs closer to the key store
+the content. Kademlia uses a couple of mechanisms to ensure an efficient
+key-republishing:
+
+- 1) the key will only re-published the key after 1h after it received a 
+	`STORE_VALUE` on that respective kv pair.
+- 2) avoid node lookups before re-publishing keys
+
+**delayed PING**: to reduce traffic, probing contacts with RPC `PING` can be
+delayed until the need of a useful contact.
+
+**response delays, stale nodes and backoff interval**: Kademlia uses UDP, thus 
+some packets may be dropped on the wire. Kademlia implements an exponential 
+increasing backoff interval when contacting unresponsive nodes. When a node
+fails to respond to 5 RPCs, the node is considered stale. If the k-bucket where
+the stale node is not full, the node is flagged as stale. Otherwise it is
+dropped.
+
+**accelerated lookups**: by increasing the routing table size, the number of
+lookup hops will statistically decrease.
+
+**caching**: lookups to a given key converge to the same path. Caching the
+values along the path improves lookup efficiency and spares resources;
+
+**other notes**:
+- It minimizes number of configuration messages exchanged between nodes: 
+	configuration information spreads naturally during the node communications;
+- It leverages async calls to minimize delays from failed nodes;
 
 ### k-buckets and routing table 
 
