@@ -2,7 +2,7 @@
 
 Distributed Hash Tables (DHT) are an important primitive which allow multiple 
 nodes to collaboratively store and retrieve data in a completely decentralized
-network. Nowadays, millions of users are using projects and service which rely 
+networks. Nowadays, millions of users are using projects and service which rely 
 on DHTs: Bittorrent, IPFS, Freenet, Ethereum are just examples of projects 
 leveraging DHTs to store and retrieve data in decentralized networks. With the
 upcoming Web 3.0, it is only expected that DHTs will become even more important
