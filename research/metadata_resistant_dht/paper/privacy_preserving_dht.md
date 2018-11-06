@@ -62,7 +62,6 @@ In the context of DHTs, ...
 
 To the author knowledge, in-DHT onion routing has not been deployed yet.
 
-
 ## Provably secure onion circuit building
 
 A node must be able to hide from internal and external peers which nodes were
@@ -91,6 +90,20 @@ The probability must hold even though:
 3) relay nodes enter and leave the network in unpredictable ways (churn).
 
 
+**Two approaches to agains route capturing and bias attacks** when getting
+information to construct the onion circuit are:
+
+1) Identify and isolate nodes performing attacks; This is not trivial to achieve
+in a completely decentralized way (i.e. without relying on central certificate
+authorities);
+
+2) Use mechanisms to find node IDs that do not rely on direct finger table 
+sharing from other nodes. One naive example could be to passively listen to network
+activity for a while and select the node IDs that are more likely to be honest.
+This approach has the problem of publicly narrowing down too much the subset of
+nodes that are eligible to be part of the circuit, since possible malicious
+nodes can learn which nodes are more likely to be picked by the circuit
+constructor when using this passive mechanism.
 
 # Conclusion
 
