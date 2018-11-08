@@ -53,14 +53,14 @@ The remaining paper is structured as follows. First, we describe how a general p
 
 *as in Freenet "darknet"*
 
+# In-DHT garlic routing
+
+*as in I2P*
+
 # In-DHT onion routing
 
 Onion routing [[@OR1], [@OR2]] has been researched and used [@Tor]
 to protect network level metadata leakage
-
-In the context of DHTs, ...
-
-To the author knowledge, in-DHT onion routing has not been deployed yet.
 
 ## Provably secure onion circuit building
 
