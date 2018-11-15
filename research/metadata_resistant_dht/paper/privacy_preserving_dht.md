@@ -20,14 +20,35 @@ This work aims at building the foundations to research and implement privacy pre
 
 The remaining paper is structured as follows. First, we review literature on privacy preserving protocols and techniques on P2P networks. Secondly, we describe how a general purpose DHT works and outline the most popular protocols used nowadays and their respective applications. Thirdly, we describe the threat model of DHTs from a security and privacy perspectives. We then proceed with by reviewing protocols and techniques that aim at preserving complete or a subset of privacy properties in DHTs. Finally, we outline open questions and future research directions.
 
+# Distributed Hash Tables
+
+- any peer can participate in the network
+- recursive vs iterative routing protocol
+- constrained overlay vs non-constrained
+
+## Applications
+
+In this section we outline current and potential applications of DHTs and motivate where privacy is important in each case.
+
+- **Distributed file systems and content caches** (e.g. IPFS)
+
+- **Private directory** (e.g. Tor)
+ 
+- **Distributed service discovery** (e.g. Ethereum)
+
+## Problem statement: privacy vulnerabilities
+
+Given its decentralized nature, naive DHTs are vulnerable to multiple attacks that can directly affect privacy. The underlying reason for the privacy vulnerabilities in DHTs is that peers need to cooperate with each other by routing requests within the network, since each peer has only a partial view of the network. Anyone can passively track the requests done by a particular peer. Since the requests issued by the lookup initiator converge towards the lookup destination over time, a passive adversary can link lookup initiator with a particular content request. Intuitively, this means that potentially every peer participating in the network can easily learn which content a particular peer is requesting. According to [@terminology] and our threat model (Section X), such system design does not provide user privacy.
+
 # Literature Review
  
 Octopus [@octopus] is a DHT lookup mechanism that aims at providing security and anonymous lookups. The threat model assumes partial adversaries that control up to a fraction of the network (max. 20%) and discards the possibility of global adversaries with the ability to monitor all the traffic in the network. [@octopus] remarks that anonymity in DHTs as defined by [@terminology] can only be achieved if the DHT is secure against active attacks. An adversary can use its influence in the network to perform lookup bias attack, lookup misdirection attack and finger pollution attack to de-anonymize a lookup initiator. Thus, [@octopus] starts by describing how active attacks can be identified and flagged. Since all the active attacks are performed by manipulating adversary finger tables, the strategy to flag those attacks consists of honest nodes checking the correctness of other node's routing tables coupled to a reputation system. For this purpose, Octopus defines another overlay network for peers to check the correctness of its neighbor's routing table. To punish malicious peers, a Certificate Authority (CA) is used to revoke rights for identified malicious nodes to participate in the network. Once the active attacks are identified and flagged, Octopus ensures anonymity by using an anonymous path to send lookup requests without revealing who is the initiator. Moreover, it splits queries into multiple paths and introduces dummy queries to achieve lookup anonymity. [@octopus] showed that Octopus "has reasonable lookup latency and communication overhead".
 
-# Distributed Hash Tables
 
-- any peer can participate in the network
-- constrained overlay vs non-constrained
+Nisan [@nisan] is a protocol for peers to select uniformly a set of nodes in a P2P network while having limited knowledge of the network. It also aims at providing a privacy layer so that no other peer in the network can guess which set of nodes were selected by a particular peer. Nisan considers active and passive attacks. Active attacks are performed by peers by ... Passive attacks consist of... As part defense against active adversaries which may drop or bias requests, 
+In order to protect against active attacks, Nisan proposes an improved redundancy lookup mechanism - *aggregated greedy search*. The goal is to make sure that adversary nodes are not able to influence the lookup, while ensuring that the redundant lookup paths do not converge. However, the authors showed that if the requested peers know what is the lookup ID, adversary peers can perform eclipse attacks which defeat the aggregates greedy search. To avoid this, the queried peer must not know what is the ID the lookup initiator is interested in. Thus, the lookup initiator requests the whole finger table from the queried peer, rather than the peer closest to a particular ID. 
+Both mechanisms, however, do not protect the lookup initiator against passive attacks. As a matter of fact, redundant lookups increase the attack surface for passive attackers, since there is more information flowing in the network about the lookup initiator goals and simple packet correlation can easily ...
+
 
 # Threat model
 
@@ -39,7 +60,7 @@ We also consider message unlinkability [@terminology] as a requirement for a pri
 
 ## Attacks on DHT
 
-Given its decentralized nature, naive DHTs are vulnerable to multiple attacks that can directly affect privacy. The underlying cause of the attacks are when malicious nodes cooperatively deceit honest nodes about their routing tables.  Most of the privacy preserving mechanisms and protocols [shadowwalker], [@octopus], *...* need ways to enforce security in DHT before providing privacy. According to [@octopus] DHTs are vulnerable to the following attacks:
+Most of the privacy preserving mechanisms and protocols [shadowwalker], [@octopus], *...* need ways to enforce security in DHT before providing privacy. According to [@octopus] DHTs are vulnerable to the following attacks:
 
 - *Lookup Bias Attack:*: 
 
@@ -66,9 +87,13 @@ to protect network level metadata leakage
 
 # Open questions and future research
 
-**scalable and decentralized secure DHT**: malicious peers that control a fraction of the network are able to perform 
+- **Scalable and secure DHT**: malicious peers that control a fraction of the network are able to perform attacks that compromise privacy even when privacy mechanisms are in place. 
 
-**measuring anonymity**: *reference to 'why I'm not an entropist'*
+- **Reputation on a DHT**: How to maintain reputation (e.g. CA) without central authorities.
+
+- **Measure anonymity**: *reference to 'why I'm not an entropist'*
+
+- **Implementation and benchmarks in production**:
 
 # Conclusion
 
