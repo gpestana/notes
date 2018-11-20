@@ -42,25 +42,35 @@ Given its decentralized nature, naive DHTs are vulnerable to multiple attacks th
 
 # Literature Review
  
+## Anonymous DHT protocols and mechanisms
+
+This section covers previous literature that study how to achieve anonymous P2P networks, more specifically DHTs.
+
 <!---
 Octopus: DHT lookup for anonymity
 -->
 
 Octopus [@octopus] is a DHT lookup mechanism that aims at providing security and anonymous lookups. The threat model assumes partial adversaries that control up to a fraction of the network (max. 20%) and discards the possibility of global adversaries with the ability to monitor all the traffic in the network. [@octopus] remarks that anonymity in DHTs as defined by [@terminology] can only be achieved if the DHT is secure against active attacks. An adversary can use its influence in the network to perform lookup bias attack, lookup misdirection attack and finger pollution attack to de-anonymize a lookup initiator. Thus, [@octopus] starts by describing how active attacks can be identified and flagged. Since all the active attacks are performed by manipulating adversary finger tables, the strategy to flag those attacks consists of honest nodes checking the correctness of other node's routing tables coupled to a reputation system. For this purpose, Octopus defines another overlay network for peers to check the correctness of its neighbor's routing table. To punish malicious peers, a Certificate Authority (CA) is used to revoke rights for identified malicious nodes to participate in the network. Once the active attacks are identified and flagged, Octopus ensures anonymity by using an anonymous path to send lookup requests without revealing who is the initiator. Moreover, it splits queries into multiple paths and introduces dummy queries to achieve lookup anonymity. [@octopus] showed that Octopus "has reasonable lookup latency and communication overhead".
 
-<!---
-Nisan: Uniformly select nodes in network with partial knowledge
--->
+<!--- Nisan: Uniformly select nodes in network with partial knowledge -->
 
 Nisan [@nisan] is a protocol for peers to select uniformly a set of nodes in a P2P network while having limited knowledge of the network. It also aims at providing a privacy layer so that no other peer in the network can guess which set of nodes were selected by a particular peer. Nisan considers active and passive attacks. Active attacks are performed by peers by ... Passive attacks consist of... As part defense against active adversaries which may drop or bias requests, 
 In order to protect against active attacks, Nisan proposes an improved redundancy lookup mechanism - *aggregated greedy search* The goal is to make sure that adversary nodes are not able to influence the lookup, while ensuring that the redundant lookup paths do not converge. However, the authors showed that if the requested peers know what is the lookup ID, adversary peers can perform eclipse attacks which defeat the aggregates greedy search. To avoid this, the queried peer must not know what is the ID the lookup initiator is interested in. Thus, the lookup initiator requests the whole finger table from the queried peer, rather than the peer closest to a particular ID. 
 Both mechanisms, however, do not protect the lookup initiator against passive attacks. As a matter of fact, redundant lookups increase the attack surface for passive attackers, since there is more information flowing in the network about the lookup initiator goals and simple packet correlation can easily ...
 
-<!---
-Bifrost: Onion Routing
--->
+<!--- Bifrost: Onion Routing -->
 
 Bifrost [@bifrost] is an anonymous communication protocol that uses a DHT (Chord) as an overlay network for managing node participation and peer routing tables. The anonymity requirements are sender anonymity, receiver anonymity and data flow untraceability. Bifrost maintains a node management layer (NML) and an anonymous routing layer (ARL). The NML is responsible for keeping meta information about the overlay network, more specifically network information about the nodes connected to in the Chord overlay. The ARL is responsible for the actual communication which is similar to onion routing. It including route construction and message encryption and depends on a Public  Key Server infrastructure. Bifrost encrypts the onion packets so that the final destination is in the middle of the onion path, and subsequent relayed messages in the circuit are dummy messages.
+
+<!--- Bifrost: Onion Routing -->
+
+## Information leakage and privacy vulnerabilities
+
+This section covers previous literature that study privacy information leakage and privacy vulnerabilities on P2P networks, more specifically DHTs.
+
+<!--- active and passive attacks on AP3 and Salsa -->
+
+[@attacks_ap3_salsa]focus on showing  
 
 # Threat model
 
@@ -98,6 +108,8 @@ Onion routing [[@OR1], [@OR2]] has been researched and used [@Tor]
 to protect network level metadata leakage
 
 # Open questions and future research
+
+- **Incentives:** Privacy has costs and peers who reliably offer resources to the network should be rewarded. Micro blockchain transactions using zero knowledge proofs or confidential zero sum blockchain transactions (as in Mimblewimble/Grin)
 
 - **Scalable and secure DHT**: malicious peers that control a fraction of the network are able to perform attacks that compromise privacy even when privacy mechanisms are in place. 
 
