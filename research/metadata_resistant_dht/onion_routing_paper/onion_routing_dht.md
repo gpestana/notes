@@ -2,15 +2,15 @@
 
 *DRAFT: This document is work in progress. Please send your comments, suggestions and corrections to gpestana@hashmatter.com or join the conversation at [@notes-github]*
 
-**Abstract**: Distributed Hash Tables (DHTs) are.. A knowns privacy vulnerability of DHTs protocols are..  Onion routing is.. In this paper, we consider several details and open questions for using onion routing to protect the privacy lookup initiators in DHTs in a scalable and secure manner.  
+**Abstract**: In this paper, we discuss design and implementation details for using onion routing to preserve privacy of lookup initiators in Distributed Hash Tables (DHTs). We also review literature and outline open challenges and future work to achieve a privacy preserving DHT protocol which is secure, scalable and do not rely on centralized parties.
 
 ## Introduction 
 
 ### Distributed hash tables
 
-DHT is a network protocol that implements a hash table over a P2P network. The DHT participants have access to an API `store(data, ID)` and `lookup(ID)`, which allows peers to store data in the network and find it. Each node in the network is assigned with an unique ID. In addition, the data stored in the network also has an ID which overlaps the node ID domain. When data is stored (i.e. `store(data, ID)` is issued by a peer), it is routed between peers until it reaches the peer with the closest ID. This design enables peers to coordinate itself to store and retrieve keyed values without central point of authority or registry and provide a decentralized.
+Distributed Hash Table (DHT) is a network overlay that implements a hash table over a P2P network. The user API with has two primitives: `store(data)` and `lookup(ID)`, which allows peers to store and lookup for data in the network. While each node in the network is assigned with an unique ID belonging to a certain ID domain, the data stored in the network is also uniquely identified with an ID belonging to the same ID domain. This property is the basis to resolving the location of content in the network, since the peers with the closest ID of a certain data chunk are responsible for storing it. The gist of any DHT is its routing protocol, which defines how peers collaboratively pass requests within each other in order to resolve the correct peer where data is stored (or where to store the data, depending on what action is taking place). Although different flavors of DHT protocols implement routing in different ways, the many  
 
-Different flavors of DHT protocols implement the routing mechanism - how to pass request messages to the correct peers in the network, so that the content is found - and overlay network topology - what network organization the network adopts - in different ways. The network topology is shaped based on which network addresses a peers has access to.
+This design enables peers to coordinate itself to store and retrieve keyed values without central point of authority or registry and provide a decentralized.
 
 ### The problem: lookup initiator privacy
 
@@ -18,9 +18,13 @@ When peers make a network request for a specific data ID, usually a chain of net
 
 ## A (potential) solution: In-DHT onion routing
 
-In-DHT onion routing consist of encrypting the lookup request in multiple layers, where each layer can be decrypted by only one network peer - called relay. After decrypting one layer of the packet, the relay gains access to the information necessary to route the remaining encrypted packet to the next relay or to perform the lookup if all the layers have been decrypted already. The exit relay - the last peer in the onion circuit responsible for making the request - also has access to a response packet which consists of the encrypted onion packet that must be used for the response to be sent back to the original lookup initiator.
+Onion routing allows bidirectionally traffic with reduced latency in P2P networks and gets its protection from creating cryptographic circuits along routes that an adversary is unlikely to observe and/or control. These properties make onion routing a good fit for DHTs routing where the lookup initiator is private.
 
-The first step for a peer to use in-dht onion routing is to construct an onion circuit, An onion circuit is the set of peers that will be as relays and will be decrypting and forwarding the onion packet in the network. Tor uses a central authority directory with information necessary to construct the onion circuit and 
+In-DHT onion routing consist of encrypting the lookup request in multiple layers and relaying it through a path of peers that are able to decrypt each layer and forward the remaining packet to the next hop in the path.
+
+The first step for a peer to use in-DHT onion routing is to construct an onion circuit, An onion circuit is the set of peers that will be as relays and will be decrypting and forwarding the onion packet in the network. Tor uses a central authority directory with information necessary to construct the onion circuit. 
+
+We aim at relying entirely on a P2P, decentralized network to securely build the onion circuits.  
 
 ## Threat model 
 
@@ -54,6 +58,10 @@ Previous research have demonstrated that onion routing is vulnerable to a set of
 Note that low latency anonymity networks - such are onion routing-based netowkrs - are fundamentally broken against "The Man" [@entropist]. They do offer, though, some protection against weaker adversaries and may be an interesting trade-off between latency, overhead and anonymity for the DHT use case.
 
 
+## Onion circuit building
+
+An attacker can deanonymize an onion routing user if 1) the circuit is known to the attacker or 2) the attacker controls both entry and exist relays in the path. Thus, the onion circuit building is an important part of the onion routing security. In this section we define  circuit building security in the context of in-DHT onion routing, review literature on the subject and outline open challenges and future research work.
+
 ### Provably secure onion circuit building
 
 Conceptually, a lookup initiator must be able to hide from internal and external peers which nodes were selected when constructing the onion circuit. Formally that is translated by saying that the probability for an adversary node to successfully guess the IDs of the set of nodes which form a circuit to be uniformly distributed in the network, that is:
@@ -73,17 +81,23 @@ must be:
 
 The probability must hold even though:
 
-1) the node `n` does cannot have a full picture of the netowork at a given time and;
+1) the node `n` does cannot have a full picture of the network at a given time and;
 2) the adversary node knows the overlay fingertable of `n` at any time and;
 3) relay nodes enter and leave the network in unpredictable ways (churn).
 
+This means that 
 
-**Two approaches to against route capturing and bias attacks** when getting
+
+### Onion circuit construction vulnerabilities
+
+Selecting the nodes that will be part of the onion circuit in a completely decentralized manner is no easy tasks. (to explain: relays are not kept anywhere and should be queried as a peer joins the network or wants to build an onion circuit)
+
+### Secure 
+
+**Approaches against route capturing and bias attacks** when getting
 information to construct the onion circuit are:
 
-1) Identify and isolate nodes performing attacks; This is not trivial to achieve
-in a completely decentralized way (i.e. without relying on central certificate
-authorities);
+1) Identify and isolate nodes performing attacks; This is not trivial to achieve in a completely decentralized way (i.e. without relying on central certificate authorities);
 
 2) Use mechanisms to find node IDs that do not rely on direct finger table 
 sharing from other nodes. One naive example could be to passively listen to networks
@@ -93,17 +107,13 @@ nodes that are eligible to be part of the circuit, since possible malicious
 nodes can learn which nodes are more likely to be picked by the circuit
 constructor when using this passive mechanism.
 
-### Onion circuit construction vulnerabilities
-
-Selecting the nodes that will be part of the onion circuit in a completely decentralized manner is no easy tasks. (to explain: relays are not kept anywhere and should be queried as a peer joins the network or wants to build an onion circuit)
-
 ## Open questions and future work
 
 **minimum required entropy**:
 
 **secure and decentralized circuit construction**:
 
-**misbehaving peers and incentives**:
+**incentives**: 
 
 **public key distribution**:
 
@@ -114,5 +124,7 @@ Selecting the nodes that will be part of the onion circuit in a completely decen
 **performance and overhead**:
 
 ## Previous work
+
+[@trust] presents how trust information can improve the anonymity provided by onion-routing networks. The work presents a trust model used for selecting secure relays that reduce probability that adversaries can control both entry and exit nodes.
 
 ## Bibliography
