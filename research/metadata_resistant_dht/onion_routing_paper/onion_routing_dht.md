@@ -1,22 +1,32 @@
-# Privacy preserving lookups with In-DHT Onion Routing [RFC]
+---
+title: "Privacy preserving lookups with In-DHT Onion Routing"
+author: "Gonçalo Pestana (goncalo@hashmatter.com)"
+date: DRAFT
+---
 
 *DRAFT: This document is work in progress. Please send your comments, suggestions and corrections to gpestana@hashmatter.com or join the conversation at [@notes-github]*
 
-**Abstract**: In this paper, we discuss design and implementation details for using onion routing to preserve privacy of lookup initiators in Distributed Hash Tables (DHTs). We also review literature and outline open challenges and future work to achieve a privacy preserving DHT protocol which is secure, scalable and do not rely on centralized parties.
+**Abstract**: In this paper we discuss design and implementation details of using onion routing to preserve privacy of lookup initiators in Distributed Hash Tables. We also review literature and outline open challenges and future work to achieve a privacy preserving DHT protocol which is secure, scalable and do not rely on centralized parties.
 
-## Introduction 
+# Introduction 
 
-### Distributed hash tables
+Privacy preserving networks are important (...); P2P networks are good for designing protocols that are private. However, given its collaborative nature, naive P2P networks are more vulnerable to privacy attacks that centralized services [ref].
+
+## Distributed hash tables
 
 Distributed Hash Table (DHT) is a network overlay that implements a hash table over a P2P network. The user API with has two primitives: `store(data)` and `lookup(ID)`, which allows peers to store and lookup for data in the network. While each node in the network is assigned with an unique ID belonging to a certain ID domain, the data stored in the network is also uniquely identified with an ID belonging to the same ID domain. This property is the basis to resolving the location of content in the network, since the peers with the closest ID of a certain data chunk are responsible for storing it. The gist of any DHT is its routing protocol, which defines how peers collaboratively pass requests within each other in order to resolve the correct peer where data is stored (or where to store the data, depending on what action is taking place). Although different flavors of DHT protocols implement routing in different ways, the many  
 
 This design enables peers to coordinate itself to store and retrieve keyed values without central point of authority or registry and provide a decentralized.
 
-### The problem: lookup initiator privacy
+Current well known applications of DHTs are (...)
+
+## The problem: lookup initiator privacy
 
 When peers make a network request for a specific data ID, usually a chain of network requests starts in order for the lookup initiator to learn which peer in the network has the data - or if the data is not available. While the open collaborative nature of DHTs enables large networks of peers to resolve requests without a a single point of failure and central authority, it also leaks information to anyone in the network regarding what peers are requesting. Potentially any peer in the network has access to  which data is requested by any network peer. On applications where sensitive data is stored and requested, this poses a privacy problem to every peer in the network and renders the whole network unusable from a privacy perspective.
 
-## A (potential) solution: In-DHT onion routing
+## Onion routing
+
+# A (potential) solution: In-DHT onion routing
 
 Onion routing allows bidirectionally traffic with reduced latency in P2P networks and gets its protection from creating cryptographic circuits along routes that an adversary is unlikely to observe and/or control. These properties make onion routing a good fit for DHTs routing where the lookup initiator is private.
 
@@ -26,13 +36,13 @@ The first step for a peer to use in-DHT onion routing is to construct an onion c
 
 We aim at relying entirely on a P2P, decentralized network to securely build the onion circuits.  
 
-## Threat model 
+# Threat model 
 
 Onion routing security breaks against an adversary that can observe the whole network and . Onion routing is designed to be secure against adversaries with only partial view of the network, so we do not consider an attacker that have a full view of the network at any time and can see all links between peers (or, as [@entropist] refers to it, "The Man").
 
 We consider a local adversary with partial view of the network and that controls up to a fraction `f` of colliding nodes in the network. We consider `f`  to be `0.2`.
 
-## Goals
+# Goals
 
 In the current work, we define as main goal to design a DHT which leverages onion routing to achieve the following goals:
 
@@ -43,26 +53,15 @@ In the current work, we define as main goal to design a DHT which leverages onio
 - Relatively low computational and time overhead; 
 
 
-## In-DHT onion routing
+# In-DHT onion routing
 
-### Protocol
-
-### Onion routing vulnerabilities
-
-Previous research have demonstrated that onion routing is vulnerable to a set of de-anonymizing attacks under the assumption that an active and passive attacker with partial view of the network - and in some cases even weaker. These attacks are effective given the low-latency nature of the protocol. The In-DHT onion routing is vulnerable to the same set of attacks, which are:
-
-- **Adversary controls entry and exit relay**: this timing attack is effective regardless of the entropy in the network [@entropist]. An attacker which controls entry and exit relay is able to correlate and de-anonymize packets in the circuit, regardless of the number of peers using the same relays.
-
-- ...
-
-Note that low latency anonymity networks - such are onion routing-based netowkrs - are fundamentally broken against "The Man" [@entropist]. They do offer, though, some protection against weaker adversaries and may be an interesting trade-off between latency, overhead and anonymity for the DHT use case.
-
+## Protocol overview
 
 ## Onion circuit building
 
 An attacker can deanonymize an onion routing user if 1) the circuit is known to the attacker or 2) the attacker controls both entry and exist relays in the path. Thus, the onion circuit building is an important part of the onion routing security. In this section we define  circuit building security in the context of in-DHT onion routing, review literature on the subject and outline open challenges and future research work.
 
-### Provably secure onion circuit building
+## Provably secure onion circuit building
 
 Conceptually, a lookup initiator must be able to hide from internal and external peers which nodes were selected when constructing the onion circuit. Formally that is translated by saying that the probability for an adversary node to successfully guess the IDs of the set of nodes which form a circuit to be uniformly distributed in the network, that is:
 
@@ -85,14 +84,23 @@ The probability must hold even though:
 2) the adversary node knows the overlay fingertable of `n` at any time and;
 3) relay nodes enter and leave the network in unpredictable ways (churn).
 
-This means that 
+The underlying idea is that even if a lookup initiator has a local view of the network, if the adversary has no information about what's the view of the network the peer has, it works the same as if the peer had a global view of th system.
 
+## Onion routing vulnerabilities
 
-### Onion circuit construction vulnerabilities
+Previous research have demonstrated that onion routing is vulnerable to a set of de-anonymizing attacks under the assumption that an active and passive attacker with partial view of the network - and in some cases even weaker. These attacks are effective given the low-latency nature of the protocol. The In-DHT onion routing is vulnerable to the same set of attacks, which are:
 
-Selecting the nodes that will be part of the onion circuit in a completely decentralized manner is no easy tasks. (to explain: relays are not kept anywhere and should be queried as a peer joins the network or wants to build an onion circuit)
+- **Adversary controls entry and exit relay**: this timing attack is effective regardless of the entropy in the network [@entropist]. An attacker which controls entry and exit relay is able to correlate and de-anonymize packets in the circuit, regardless of the number of peers using the same relays.
 
-### Secure 
+- Selecting the nodes that will be part of the onion circuit in a completely decentralized manner is no easy tasks. (to explain: relays are not kept anywhere and should be queried as a peer joins the network or wants to build an onion circuit)
+
+- ...
+
+Note that low latency anonymity networks - such are onion routing-based networks - are fundamentally broken against "The Man" [@entropist]. They do offer, though, some protection against weaker adversaries and may be an interesting trade-off between latency, overhead and anonymity for the DHT use case.
+
+## Secure DHT 
+
+A privacy preserving DHT can only be achieved if the DHT is secure [ref]
 
 **Approaches against route capturing and bias attacks** when getting
 information to construct the onion circuit are:
@@ -106,6 +114,12 @@ This approach has the problem of publicly narrowing down too much the subset of
 nodes that are eligible to be part of the circuit, since possible malicious
 nodes can learn which nodes are more likely to be picked by the circuit
 constructor when using this passive mechanism.
+
+# Previous work
+
+[@trust] presents how trust information can improve the anonymity provided by onion-routing networks. The work presents a trust model used for selecting secure relays that reduce probability that adversaries can control both entry and exit nodes.
+
+# Conclusion
 
 ## Open questions and future work
 
@@ -123,8 +137,5 @@ constructor when using this passive mechanism.
 
 **performance and overhead**:
 
-## Previous work
 
-[@trust] presents how trust information can improve the anonymity provided by onion-routing networks. The work presents a trust model used for selecting secure relays that reduce probability that adversaries can control both entry and exit nodes.
-
-## Bibliography
+# Bibliography
