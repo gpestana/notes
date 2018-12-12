@@ -4,7 +4,7 @@ author: "Gonçalo Pestana (gpestana@protonmail.com)"
 date: Dec 2018
 ---
 
-This document motivates and summarizes my research goals for the short and long term. In addition, it outlines initial ideas for potential research topics without going in detail and without a throughout literature review. 
+This document motivates and summarizes my research goals for the short and long term. In addition, it outlines initial ideas for potential research topics, leaving literature review and further details for a later document. 
 
 ## Research goals
  	
