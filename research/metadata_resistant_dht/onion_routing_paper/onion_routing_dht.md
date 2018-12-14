@@ -52,6 +52,10 @@ In the current work, we define as main goal to design a DHT which leverages onio
 - Low latency network;
 - Relatively low computational and time overhead; 
 
+## Non-goals
+
+In privacy preserving networks there is trade-off between anonymity and privacy and performance [@passive_attacks_low_latency]. Low latency privacy preserving networks are vulnerable to targeted attacks on a small subset of network peers through timing attacks based on traffic flow analysis. In this work, we emphasize lookup performance over targeted attack security.
+
 
 # In-DHT onion routing
 

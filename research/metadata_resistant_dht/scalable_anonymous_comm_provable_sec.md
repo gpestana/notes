@@ -1,4 +1,4 @@
-## Scalable Anonymous Communication with Provable Security
+## Scalable Anonymous Communication with Provable Securitys
 **Prateek Mittal, Nikita Borisov, Carmela Troncoso, Alfredo Rial**
 
 **what**: the study proposes two new primitives for scalable, anonymous communication with (theoretically) provable security. 1) P2P based system based on neighbor policies for achieving anonymity; 2) client-server PIR (private information retrieval) system;

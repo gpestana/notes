@@ -24,10 +24,10 @@ networks?). Assumes partial adversaries that can control up to 20% of the
 network. Adversaries are able to intercept, log, modify and drop messages of the
 network. Sybil attacks are not considered.
 
-**security and anonimity in DHTs**: a certain degree of security is needed for
+**security and anonymity in DHTs**: a certain degree of security is needed for
 achieving anonymity in DHTs
 
-**security and anonimity goals**: security: the most important goal for security
+**security and anonymity goals**: security: the most important goal for security
  is that lookup messages are not biased (dropped/modified/...) by adversaries;
 anonymity: 1) not possible to determine who sent a specific DHT lookup message;
 2) given a lookup initiator, it should not be possible to determine the target
@@ -92,7 +92,7 @@ network is. Metrics are: 1) fraction of malicious nodes in the network
 malicious)
 - over time, a malicious node will be identified with probability 
 
-**anonimity mechanisms**: Octopus DHT considers only passive attackers - since
+**anonymity mechanisms**: Octopus DHT considers only passive attackers - since
 active attackers are removed from the system through the security mechanisms.
 - construction of anonymity paths to send lookup queries while hiding the
   initiator

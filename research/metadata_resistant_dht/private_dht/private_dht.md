@@ -84,7 +84,9 @@ By design, an honest peer which stores the pair `key:value` requested will have
 access to which peer initiated the request. Although this information is
 necessary for replying to `GET` requests, we consider this a privacy threat.
 
-## Goals
+## Desired properties
+
+// see HORNET
 
 - An adversary who controls a fraction of the network nodes is not able to link
   lookup requests to the lookup initiator by passively listening to lookup
