@@ -1,9 +1,9 @@
 ## Everyone is naked: privacy on P2P systems
 
 In this talk, we'll discuss about one of the hardest challenges of decentralized
-web and P2P systems: privacy. We focus on current systems and applications built
-- or relying - on P2P networks, specially on the rather interesting constant
-  conflict between scalability, performance, discoverability (or collaboration,
+web and P2P systems: privacy. We focus on current systems and applications built - 
+or relying - on P2P networks, specially on the rather interesting constant
+conflict between scalability, performance, discoverability (or collaboration,
 for short) and the privacy of the network users. We will demonstrate how current
 systems are a threat for user privacy and discuss how recent research has been
 trying to solve current open problems while taking into considerations the
