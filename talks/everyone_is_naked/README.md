@@ -3,8 +3,8 @@ Everyone is naked: privacy on P2P systems
 Version review-0.1
 
 
-In this talk, we'll discuss about one of the hardest challenges of decentralized
-web and P2P systems: privacy. We focus on current systems and applications built
+In this talk, we'll discuss one of the hardest challenges of decentralized web
+and P2P systems: privacy. We’ll focus on current systems and applications built
 or relying on P2P networks, focusing on the rather interesting tension between
 scalability, performance, discoverability (or collaboration, for short) and
 privacy of the network users. We will demonstrate how current systems are a
@@ -13,7 +13,7 @@ to solve current open problems while taking into considerations the tradeoffs
 between privacy and usability. Technology is a political tool [1], so we finish
 by outlining the importance for building technology that protects users privacy
 by design and why P2P and decentralized systems must deliver on privacy for it
-to have net positive impact on our society.
+to have a net positive impact on our society.
 
 Main takeaway: The ethos of the P2P community and the decentralized web is based
 on a new paradigm where people and communities can interoperate and collaborate
@@ -34,12 +34,12 @@ P2P, distributed systems, encryption, metadata, privacy: Throughout the talk we
 will use concepts that often overlap and mean different things depending on the
 context. We define a distributed system as a system of entities that collaborate
 to achieve a common goal. In a distributed system, there can be a set of central
-authority which orchestrates the network. A decentralized network is a subset of
-distributed systems where there is no centralized entity that controls the
+authorities which orchestrate the network. A decentralized network is a subset
+of distributed systems where there is no centralized entity that controls the
 behavior of the network or maintains a global state. A P2P system is a system
 where connected peers behave as both clients and servers by consuming and
 providing resources to the network. Each network peer implements a set of
-protocols that enable peers to collaborate with each other. Notice how P2P,
+protocols that enables peers to collaborate with each other. Notice how P2P,
 decentralized and distributed systems overlap at the edges. In this talk, we
 will be focusing especially on P2P and decentralized systems. 
 
@@ -67,7 +67,7 @@ start by focusing on the "low hanging fruit”: on how to make the systems secur
 and private against local adversaries. 
 
 In a nutshell, interactions between peers in the network should not disclose any
-information over time about peer's interests and behaviour. Adversaries or
+information over time about peers’ interests and behaviour. Adversaries or
 curious honest peers should not be able to infer users' behaviour based on their
 network activity. Let's consider the following cases:
 
@@ -76,7 +76,7 @@ stored in a distributed network. The resources stored in the network are content
 addressed and replicated by multiple peers (the providers). The initiator sends
 the request to a subset of the network peers to learn where to get the resource
 from. The request is routed across the network peers, which use their partial
-view of the network to resolve the which peers are providers for the requested
+view of the network to resolve which peers are providers for the requested
 resource. Once a provider is discovered, the initiator requests the website from
 it. 
 
@@ -84,7 +84,7 @@ The example above is a high level protocol for routing and discovery in
 decentralized networks. Since peers in the network collaborate to resolve the
 initiator request, they need to know which resource is being resolved. The peers
 . In addition, the initiator also learns that the provider has most likely
-accessed (or is the original creator) of the resource she requested. 
+accessed (or is the original creator of) the resource she requested. 
 
 Thus, adversaries or curious honest peers are able to infer the initiator and
 provider behaviour and interests based on what content they request and store,
@@ -96,9 +96,9 @@ users will likely cache personal resources on their devices. A personal resource
 the network, which map to physical devices such as laptops, mobile devices and
 servers with an IP address. An adversary may be able to learn which devices and
 IPs correspond to the owner of the resource by correlating information about
-which peers are providing a specific resource. In the limit, an adversary will
-be able to infer over time what are the IPs (which discloses location and other
-critical personal information [ref]) a network peer uses.  
+which peers are providing a specific resource. In the limit, over time an
+adversary will be able to infer over time what are the IPs (which discloses
+location and other critical personal information [ref]) a network peer uses.  
 
 In real life, how can this be used to target individuals and communities? We
 will indulge in this question in later sections, but let's take a sneak-peak on
@@ -145,16 +145,16 @@ the wire. The pressure to deliver higher volumes of data at lower latency at an
 increasing scale has pushed CDNs to expand the number of cache servers in new
 regions. As end user's hunger for data and impatience keeps growing, it becomes
 harder for CDNs to keep up with the needs for deploying and maintaining servers
-at the edges. In order improve scalability and efficiency in this context, CDNs
-are using P2P approach to caching and distribution of content, where end users
-that downloaded resources contribute with caching and distribution of content.
-The P2P network of peers caching and distribution content is usually called a
-Peer-assisted Content Delivery Networks (pCDN). The advantages of having this
-mechanism are clear: end users replace physical servers in the last mile and
-ensure the network grows and scales organically without the need for deploying
-and maintaining more servers. Providers offering pCDN services claim 98% of CDN
-bandwidth savings and improved video latency [peer5] [viblast], when compared to
-traditional CDN networks.
+at the edges. In order to improve scalability and efficiency in this context,
+CDNs are using P2P approach to caching and distribution of content, where end
+users that download resources contribute with caching and distribution of
+content. The P2P network of peers caching and distribution content is usually
+called a Peer-assisted Content Delivery Networks (pCDN). The advantages of
+having this mechanism are clear: end users replace physical servers in the last
+mile and ensure the network grows and scales organically without the need for
+deploying and maintaining more servers. Providers offering pCDN services claim
+98% of CDN bandwidth savings and improved video latency [peer5] [viblast], when
+compared to traditional CDN networks.
 
 Peer-assisted CDN networks are hybrid systems - leveraging distributed as well
 as decentralized networks -, and are a good example of the potential for P2P
@@ -167,22 +167,22 @@ distributing the content at the edges are also able to “see" what peers in the
 vicinity want to consume and when. When designed naively, pCDNs bundle the worst
 of both centralized and decentralized systems in terms of privacy, by disclosing
 user behaviour not only to a central authority but also to arbitrary network
-peers. pCDN providers claim to delivery on security and privacy because “all
+peers. pCDN providers claim to deliver on security and privacy because “all
 communication are encrypted" [peer5]. However, since the P2P network is not
 hardened against inference attacks, the claim is simply not true. Let's use
 Viblast pCDN [viblast] as an example why.
 
 Viblast is a pCDN provider for video distribution which relies on a server-side
 caching (CDN) and browser technology (WebRTC) to implement a decentralized
-network to distribute content at the edges. The architecture works as follow:
+network to distribute content at the edges. The architecture works as follows:
 the server stores and distributes videos in the HLS [hls] and MPEG-DASH
 [mpeg-dash] streaming format. The client initially fetches the video from the
 server, feeds the stream into a video player and stores the stream data in the
 browser. The client-side library will register itself as a provider for the
-content downloaded a in a centralized tracker maintained by the server. When a
-new client requests the same resource, the server decides whether to serve the
-new client directly or to delegate that function the the providers registered in
-the tracker. If the server decides to delegate the content delivery to a peer
+content downloaded in a centralized tracker maintained by the server. When a new
+client requests the same resource, the server decides whether to serve the new
+client directly or to delegate that function the the providers registered in the
+tracker. If the server decides to delegate the content delivery to a peer
 providers, it "introduces" the peers to each other so that the peer streaming
 can start. We set up the server hosting three videos and create a simple webpage
 with the client side library installed, from which we can stream the videos
@@ -213,17 +213,16 @@ likely to be responsible for storing a given ID. By recursively routing a
 store/lookup request to the closest known peer, a request initiator will
 eventually learn where a given content is stored in the network, if it exists.
 In sum, DHTs rely on consistent hashing and key-based routing for providing a
-decentralized key-value store while network peers implement a collaborative
+decentralized key-value store, while network peers implement a collaborative
 routing protocol to learn which peers are responsible for storing a given
 content.
-
-The collaborative nature of DHTs results on resilient, scalable and
+The collaborative nature of DHTs results in resilient, scalable and
 decentralized networks where nodes are not required to maintain a complete view
 of the network while, simultaneously, not relying on central authorities. These
 properties make DHTs an important building block for the decentralized web and
 P2P systems. From a privacy perspective, DHTs are a good example of how network
 peers maintaining a partial view of the network and relying on open
-collaboration to obtain more information about the network is synonym with
+collaboration to obtain more information about the network is synonymous with
 metadata leaks, specially when when privacy preserving mechanisms are not baked
 into the protocol.
 
@@ -258,9 +257,10 @@ location throughout time. This can potentially give an attacker a good overview
 of where Bob is physically over time and infert where Bob's house is, when he's
 travelling, etc.
 
-Another attack vector consists on an attacker to pin content and inspect who is
-requesting it. The attacker can infer who is interested in a particular content
-by simply caching it. This case is  similar to pCDN case demonstrated above. 
+Another attack vector consists of an attacker pinning content and inspecting who
+is requesting it. The attacker can infer who is interested in a particular
+content by simply caching it. This case is  similar to pCDN case demonstrated
+above. 
 
 By placing multiple nodes in the network and registering the lookup and store
 requests being routed through the network, an attacker can accumulate enough
@@ -270,8 +270,8 @@ against BitTorrent users [ref] [ref-paper].
 
 Check the demo videos here [dht-attack-video]. The main takeaway from the demo
 is that by being a peer provider of a particular resource, we were able to learn
-the IP address of the clients requesting the resource using widespread
-networking tools such as Wireshark [wireshark].
+the IP address of the client requesting the resource using widespread networking
+tools such as Wireshark [wireshark].
 
 n We use IPFS DHT as an example due to its stability, available tooling and APIs
 which makes it very easy and fast to, for example, query a provided of a given
@@ -287,14 +287,14 @@ result from the need for collaboration between peers while each of the peers
 maintain only partial view of the network topology and its resources. From here
 stems the tension between efficiency and scalability and privacy in P2P systems:
 while maintaining a partial view of the network and delegating work to other
-peers helps with scalability and efficiency, it also requires users to discloses
+peers helps with scalability and efficiency, it also requires users to disclose
 interests and personal private information. Current techniques and tools to
 enhance privacy in P2P networks work only to alleviate that tension by
 decoupling user interests from peer behaviour and providing plausible
 deniability to users (e.g. "I'm storing or relaying content but I had no idea
 about it" or “I'm performing this request by delegation. I'm not the request
 initiator and I don't even know his identity"). However, privacy preserving P2P
-protocols will be definition require more work and resources and be less
+protocols will by definition require more work and resources and be less
 scalable and performant than its leaking counterparts. This fact seems
 unavoidable based on the recent research and privacy preserving engineering.
 
@@ -317,7 +317,7 @@ passive adversaries in the threat model considered in this talk are unlikely to
 learn who is the message originator based on network packet flows. However, this
 assumes a certain level of entropy in the network and circuits with
 non-colluding relays. Selecting relays anonymously is paramount for the security
-of onion routing protocols and hard to design in completely decentralized
+of onion routing protocols and hard to design in a completely decentralized
 manner. P2P networks using onion routing (e.g. The Onion Routing [Tor]) often
 rely on centralized directories that keep a list and metrics of relays in the
 network. However, as the network size and number of relays increase, maintaining
@@ -329,10 +329,10 @@ to query a centralized relay directory without leaking any information to the
 entities maintaining the directory. Other completely decentralized solutions for
 selecting a set of healthy relays anonymous with partial view of the network is
 based on random stochastic walks on the network [ref] and random walks on
-restricted topologies [shadowwalker]. Although some fo these approaches are
-promising - while others were shown to be insecure -, these solutions assume
+restricted topologies [shadowwalker]. Although some of these approaches are
+promising - while others were shown insecure [ref] -, these solutions assume
 complex mechanisms and protocols to ensure that relays are trustworthy and
-behaving, which  increase complexity and infrastructure costs. Needless to say
+behaving, which increase complexity and infrastructure costs. Needless to say
 that onion routing involves cryptographic processing and redundant packet
 forwarding which consumes resources from the network. Onion routing is a good
 example of the rule of thumb that privacy is not free. Multiple non-colluding
@@ -344,7 +344,7 @@ network while behave as expected.
 
 In summary, onion routing is a promising PET against local adversaries on
 latency sensitive P2P networks, however this approach hasn't been used by many
-current networks. There are multiple interesting challenge to solve such as
+current networks. There are multiple interesting challenges to solve such as
 relay incentives [refs], anonymous and secure circuit building under a partial
 network view[refs], circuit redundancy and recovery [refs] and privacy metrics
 and visibility [ref] under such conditions.
@@ -365,7 +365,7 @@ complexity for system designers and developers and makes it harder to reason
 about the overall network functioning.
 
 n We are limited in terms of space and time for this talk. There will be a
-followup talk [privacy-engineering-p2p-talk] which focus in on the privacy
+followup talk [privacy-engineering-p2p-talk] which focuses on the privacy
 preserving engineering and research of P2P networks. Throughout that talk, we
 will dive deep into the current research and implementations of PETs for P2P
 networks, its tradeoffs and open problems.
@@ -373,16 +373,16 @@ networks, its tradeoffs and open problems.
 3. The why and wrap up
 
 This talk paints a startlingly negative picture about privacy of current P2P and
-decentralized networks. The question that I often ask myself is given the
+decentralized networks. The question that I often ask myself is: given the
 current state of affairs and open challenges, why should we bother with P2P
 technology at all? Why don't we stick with centralized services instead? The
 more I ask this question, the clearer the reasons are: for the sake of
 scalability, protection against surveillance and online censorship, and because
 P2P systems are the only solution for online privacy. P2P and decentralized
 systems are still the best way to ensure that our privacy online is respected
-while ensuring that censorship does not creep up our in society, provided - and
+while ensuring that censorship does not creep up in our society, provided - and
 this is one of the main points of this talk - that the systems are designed and
-implemented with with privacy a main goal.
+implemented with with privacy as a main goal.
 
 Phillip Rogaway starts his seminal work called The Moral Character of
 Cryptographic Work with the following sentence: “Cryptography  rearranges
@@ -391,7 +391,7 @@ inherently political tool, and it confers on the field an intrinsically moral
 dimension." (by all means go ahead and read it, Phillip Rogaway shows the
 importance .. that I could only dream to be capable of).
 
-So, what do we as researchers, system designers, developers and community need
+So, what do we, as researchers, system designers, developers and community need
 to ...? 
 
 Be upfront about the privacy problems with your users;
@@ -412,6 +412,5 @@ References
 [dht-attack-video]
 [mainline-dht]
 [dat]
-
 
 
