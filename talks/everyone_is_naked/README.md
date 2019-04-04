@@ -1,8 +1,5 @@
 Everyone is naked: privacy on P2P systems
 
-Version review-0.1
-
-
 In this talk, we'll discuss one of the hardest challenges of decentralized web
 and P2P systems: privacy. We’ll focus on current systems and applications built
 or relying on P2P networks, focusing on the rather interesting tension between
@@ -43,12 +40,13 @@ protocols that enables peers to collaborate with each other. Notice how P2P,
 decentralized and distributed systems overlap at the edges. In this talk, we
 will be focusing especially on P2P and decentralized systems. 
 
-Metadata is often referred as a set of data that describes and gives information
-about other data. In the context of this talk, we define metadata as any type of
-information (e.g. the fact that a connection occurred between two machines) that
-may be used to infer behaviour of a node in a P2P network. Throughout the talk,
-when mentioning privacy we refer to a metric of how much data and metadata a
-user leaks when using a system. Or from an attacker perspective, how much user
+Another concept we will discuss throughout the talk is metadata. Metadata is
+often referred as a set of data that describes and gives information about other
+data. In the context of this talk, we define metadata as any type of information
+(e.g. the fact that a connection occurred between two machines) that may be used
+to infer behaviour of a node in a P2P network. Throughout the talk, when
+mentioning privacy we refer to a metric of how much data and metadata a user
+leaks when using a system. Or from an attacker perspective, how much user
 personal information - interactions, social graph, interests - can be inferred
 by adversaries passively intercepting network requests. Notice that even if the
 communications are encrypted between peers, disclosing the fact that a
@@ -82,9 +80,9 @@ it.
 
 The example above is a high level protocol for routing and discovery in
 decentralized networks. Since peers in the network collaborate to resolve the
-initiator request, they need to know which resource is being resolved. The peers
-. In addition, the initiator also learns that the provider has most likely
-accessed (or is the original creator of) the resource she requested. 
+initiator request, they need to know which resource is being resolved. In
+addition, the initiator also learns that the provider has most likely accessed
+(or is the original creator of) the resource she requested. 
 
 Thus, adversaries or curious honest peers are able to infer the initiator and
 provider behaviour and interests based on what content they request and store,
@@ -96,9 +94,9 @@ users will likely cache personal resources on their devices. A personal resource
 the network, which map to physical devices such as laptops, mobile devices and
 servers with an IP address. An adversary may be able to learn which devices and
 IPs correspond to the owner of the resource by correlating information about
-which peers are providing a specific resource. In the limit, over time an
-adversary will be able to infer over time what are the IPs (which discloses
-location and other critical personal information [ref]) a network peer uses.  
+which peers are providing a specific resource. Over time an adversary will be
+able to infer what are the IPs a network peer uses, which may disclose location
+and other personal information [ref].  
 
 In real life, how can this be used to target individuals and communities? We
 will indulge in this question in later sections, but let's take a sneak-peak on
@@ -114,22 +112,23 @@ who haven't realized it yet: they do exist!). In this context, the decentralized
 network could be used by governmental agencies to identify and prosecute people
 who created, stored and distributed content which is deemed as against the
 government. If we add location aware routing and content distribution (main idea
-of peer-assisted CDN[ref]), it would be straightforward to learn who is e.g.
-homossexual in the neighborhood. These scenarios are short from being taken from
-a dystopian future in which freedom is part of the book.
+of peer-assisted CDN[ref]), it would be straightforward to identify
+nonconforming individuals. These scenarios are short from being taken from a
+dystopian future in which freedom is part of the past because of how technology
+can be used to profile and target individuals and communities.
 
 Notice how the adversary strategy changes when attacking decentralized systems,
-as compared to centralized systems. In centralized systems, the attacker will
-backdoor or enforce a corporation to disclose user behaviour and private
-information through litigations and subpoenas. In (naive) decentralized systems,
-the adversary strategy is to be part of the network and to passively record and
-correlate network activity. Different paradigms, different strategies, same
-problem. Technology shifts power, and thus it needs to be seen as a political
-tool [crypto-moral].
+as compared to centralized systems. In centralized systems, the attacker
+strategy is to backdoor or enforce a corporation to disclose user behaviour and
+private information through litigations and subpoenas. In (naive) decentralized
+systems, the adversary strategy is to be part of the network and to passively
+record and correlate the network activity. Different paradigms, different
+strategies, the same problem. Technology shifts power, and thus it needs to be
+seen as a political tool [crypto-moral].
 
 Next, we are going to see practical examples of how current P2P systems used
-everyday by thousands of people are leaking not vulnerable to privacy attacks
-based on our threat model.
+everyday by thousands of people are leaving its users vulnerable to privacy
+attacks.
 
 1. The emperor's new clothes
 
@@ -220,11 +219,12 @@ The collaborative nature of DHTs results in resilient, scalable and
 decentralized networks where nodes are not required to maintain a complete view
 of the network while, simultaneously, not relying on central authorities. These
 properties make DHTs an important building block for the decentralized web and
-P2P systems. From a privacy perspective, DHTs are a good example of how network
-peers maintaining a partial view of the network and relying on open
-collaboration to obtain more information about the network is synonymous with
-metadata leaks, specially when when privacy preserving mechanisms are not baked
-into the protocol.
+P2P systems. From a privacy perspective, DHTs are a good example of systems with
+intrinsic metadata leaks due to the constraint for network peers to maintain
+only a partial view of the network and to rely on open collaboration to obtain
+more information about the network. These protocols tend to leak user behaviour
+information, specially when when privacy preserving mechanisms are not baked
+into the protocols.
 
 The Interplanetary File System (IPFS) is "is a protocol and network designed to
 create a content-addressable, peer-to-peer method of storing and sharing
@@ -350,11 +350,10 @@ network view[refs], circuit redundancy and recovery [refs] and privacy metrics
 and visibility [ref] under such conditions.
 
 More PETs: There are other PETs that can be used to improve metadata resistance
-in P2P networks, either as . I believe that applied cryptography and
-cryptographic protocols such as Multi-Party Computation and Zero Knowledge
-primitives could also be used as tools for building privacy preserving P2P
-networks, specially as mechanisms that could be used to complement other
-protocols.
+in P2P networks. I believe that applied cryptography and cryptographic protocols
+such as Multi-Party Computation and Zero Knowledge primitives could also be used
+as tools for building privacy preserving P2P networks, specially as mechanisms
+that could be used to complement other protocols.
 
 Notice that these technologies are nothing more than mechanisms that "shift
 tradeoffs": while they may provide more privacy, they will inevitably hinder
@@ -372,31 +371,34 @@ networks, its tradeoffs and open problems.
 
 3. The why and wrap up
 
-This talk paints a startlingly negative picture about privacy of current P2P and
-decentralized networks. The question that I often ask myself is: given the
-current state of affairs and open challenges, why should we bother with P2P
-technology at all? Why don't we stick with centralized services instead? The
-more I ask this question, the clearer the reasons are: for the sake of
-scalability, protection against surveillance and online censorship, and because
-P2P systems are the only solution for online privacy. P2P and decentralized
-systems are still the best way to ensure that our privacy online is respected
-while ensuring that censorship does not creep up in our society, provided - and
-this is one of the main points of this talk - that the systems are designed and
-implemented with with privacy as a main goal.
+This talk shows some examples of how and why current P2P and decentralized
+services are vulnerable to privacy attacks. Given the current state of affairs,
+why should we bother with P2P technology at all? Why don't we stick with
+centralized and client-server architectures instead? Ironically, the answer is
+privacy (oh, and scalability, protection against surveillance and online
+censorship). Despite the current problems, P2P systems seem to be the only
+viable solution for online privacy where large companies and central authorities
+are not incentivize to harvest and use our private information for power
+grabbing and profit. Decentralized systems are our best chance to build services
+where our privacy online is respected provided - this being the main point of
+this talk - that P2P systems are designed and implemented with privacy in mind.
 
-Phillip Rogaway starts his seminal work called The Moral Character of
-Cryptographic Work with the following sentence: “Cryptography  rearranges
-power:  it  configures  who  can  do what, from what. This makes cryptography an
-inherently political tool, and it confers on the field an intrinsically moral
-dimension." (by all means go ahead and read it, Phillip Rogaway shows the
-importance .. that I could only dream to be capable of).
-
-So, what do we, as researchers, system designers, developers and community need
-to ...? 
-
-Be upfront about the privacy problems with your users;
-Privacy is context relevant. Provide alternatives for users to decide which
-privacy level they prefer to use for a given task. Make privacy the default.
+Phillip Rogaway starts his seminal work on The Moral Character of Cryptographic
+Work [crypto-moral] stating that: “Cryptography  rearranges  power:  it
+configures  who  can  do what, from what. This makes cryptography an inherently
+political tool, and it confers on the field an intrinsically moral dimension."
+(by all means go ahead and read the paper if you haven't yet!). In the article,
+Phillip Rogaway eloquently justifies technology as a political tool, proceeding
+by showing why the research community should keep this in mind when deciding on
+what to research and how. Similarly, P2P and dweb researchers, system designers
+and developers must seriously take privacy into consideration if we want to
+deliver software that impacts positively the Internet and our society. We need
+to be upfront about the current privacy challenges with our users; We need to
+understand that context and metadata is relevant when it comes to privacy. We
+need to defines proper threat models early. We also need to make privacy as the
+default. But most importantly, we need to do the research and development on
+metadata resistant protocols, incentive design, privacy usability and to figure
+out what it takes for us to deliver on a private and secure decentralized web.
 
 References
 
