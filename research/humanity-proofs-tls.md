@@ -1,0 +1,10 @@
+---
+title: Non-repudiation for TLS data sessions and zero knowledge proofs of humanity
+tags: research&projects, tls, research
+---
+
+# Non-repudiation for TLS data sessions and ZKPs of humanity
+
+During the TLS handshake phase, the server and the user agree on a symmetric session key. The session key is used by the TLS Record protocol to authenticate and ensure the integrity of the exchanged payload. The TLS Record protocol defines that the payload data is secured through a HMAC using the TLS session key agreed during the session handshake step. This scheme guarantees authentication (i.e. the received can verify that the payload was sent by a party who knows the session key) and integrity (i.e. the receiver can verify if the payload has been modified in-transit) of the payload data. However, the current TLS Record protocol does not guarantee non-repudiation, i.e. it does not allow a party who's participating in a TLS session to prove to third parties that a certain payload has been sent during a TLS session. Since the symmetric keys are agreed between the client and the server during the TLS handshake and the TLS Record protocol relies on the session key to generate HMACs over the payload, any TLS session party can forge arbitrary payloads that _could_ have been exchanged during the TLS session. 
+
+If a client would be able to prove the reception of non-repudiable data session from a server, they could generate forging-proof claims about TLS session data from any server. This guarantee coupled with a zero knowledge proof scheme over the session data would provide a powerful mechanism for humanity proofs on the web. For example, a user could prove in zero knowledge that they've made a purchase above a certain threshold on Amazon in the recent times. Since it is not trivial -- or cheap -- to fake Amazon purchases, these claims could be used by third parties as a strong indicator of humanity of web users.
